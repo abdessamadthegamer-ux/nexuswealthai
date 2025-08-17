@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusWealthAI - Business Efficiency Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-dark: #1e429f;
+            --secondary: #0e9f6e;
+            --accent: #ff7722;
+            --light: #f3f4f6;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light-gray: #e5e7eb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #f9fafb;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 6px rgba(26, 86, 219, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(26, 86, 219, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-primary {
+            color: var(--primary);
+        }
+        
+        .text-accent {
+            color: var(--accent);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1a56db, #0e9f6e);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .logo-icon i {
+            color: white;
+            font-size: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+            padding: 160px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
+            max-width: 600px;
+            z-index: 1;
+            border-radius: 10px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Pain Points Section */
+        .pain-points {
+            background-color: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .point-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .point-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .point-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Audit Section */
+        .audit-section {
+            background: linear-gradient(to right, #1a56db, #3b82f6);
+            color: white;
+        }
+        
+        .audit-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .audit-content {
+            flex: 1;
+        }
+        
+        .audit-steps {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: white;
+            color: var(--primary);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* Value Section */
+        .value-section {
+            background-color: white;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0e9f6e 0%, #057a55 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+            padding: 25px 0;
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .faq-answer {
+            padding-top: 15px;
+            color: var(--gray);
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-image {
+                position: relative;
+                width: 100%;
+                max-width: 500px;
+                margin: 40px auto 0;
+                transform: none;
+                top: auto;
+                right: auto;
+            }
+            
+            .hero {
+                padding: 140px 0 60px;
+                text-align: center;
+            }
+            
+            .hero-content {
+                margin: 0 auto;
+            }
+            
+            .audit-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Value Cards */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .value-item {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--light-gray);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .contact-email {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-email:hover {
+            color: var(--light-gray);
+            transform: translateY(-2px);
+        }
+        
+        .contact-email i {
+            font-size: 1.5rem;
+        }
+        
+        /* Success Message */
+        #success-message {
+            display: none;
+            background: var(--secondary);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        /* Hidden Formspree Confirmation */
+        .formspree-confirmation {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-icon">
+                        <i class="fas fa-chart-network"></i>
+                    </span>
+                    NexusWealthAI
+                </a>
+                <a href="#audit" class="btn btn-primary">Get Free Audit</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Austin Professionals: Stop Losing <span class="text-accent">$8,000+/Month</span> to Missed Opportunities & Operational Chaos?</h1>
+                <p>Get Your FREE Business Efficiency Audit & Discover Exactly How to Reclaim Lost Revenue & Staff Time in Less Than 2 Minutes.</p>
+                <a href="#audit" class="btn btn-primary">Get My Free Audit Now - Takes 2 Min</a>
+            </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Business Efficiency" class="hero-image">
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="container">
+            <div class="section-header">
+                <h2>Is Your Business Bleeding Money & Time?</h2>
+                <p>These common challenges are costing Austin professionals thousands every month:</p>
+            </div>
+            
+            <div class="points-grid">
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <h3>Missed Opportunities</h3>
+                    <p>5-30% lost appointments draining <span class="text-accent">$3,000 - $8,000+</span> from your bottom line every single month.</p>
+                </div>
+                
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Scheduling Black Hole</h3>
+                    <p>Are you or your team wasting <span class="text-accent">3+ hours EVERY DAY</span> just managing calendars and chasing clients?</p>
+                </div>
+                
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-phone-missed"></i>
+                    </div>
+                    <h3>Missed Calls = Missed Business</h3>
+                    <p>Potential new clients giving up when lines are busy. How many valuable opportunities slipped away last month?</p>
+                </div>
+                
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Verification Nightmare</h3>
+                    <p>Staff bogged down in manual checks, causing delays and frustration.</p>
+                </div>
+                
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Reminder Chaos</h3>
+                    <p>Still calling/texting clients one-by-one? Inconsistent follow-up means more gaps in your schedule.</p>
+                </div>
+                
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Discover Your Hidden Losses</h3>
+                    <p>Take our 2-minute audit to uncover exactly how much revenue you're losing to inefficiencies.</p>
+                    <a href="#audit" class="btn btn-primary" style="margin-top: 15px;">Calculate My Losses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit Section -->
+    <section class="audit-section" id="audit">
+        <div class="container">
+            <div class="audit-container">
+                <div class="audit-content">
+                    <h2>Stop Guessing, Start Fixing</h2>
+                    <p>Your Free Business Efficiency Audit Reveals Your Biggest Leaks.</p>
+                    <p>Our specialized audit pinpoints exactly where your operation is losing revenue and efficiency. In just 2 minutes, answer a few key questions and get a personalized report showing:</p>
+                    <ul style="margin: 20px 0 20px 20px;">
+                        <li style="margin-bottom: 10px;">Your estimated monthly revenue loss due to inefficiencies</li>
+                        <li style="margin-bottom: 10px;">Time wasted on administrative tasks (translated into dollars)</li>
+                        <li style="margin-bottom: 10px;">Critical gaps in your client communication systems</li>
+                        <li>Opportunities for automation to free up your team</li>
+                    </ul>
+                </div>
+                
+                <div class="audit-steps">
+                    <h3 class="text-center">Get Your Personalized Insights in 3 Easy Steps:</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h4>Take the 2-Minute Audit</h4>
+                            <p>Simple online form (only quantifiable metrics)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h4>Get Your Free Report</h4>
+                            <p>Instant email delivery with personalized efficiency score</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h4>Get Expert Guidance</h4>
+                            <p>An experienced consultant will review your audit and contact you to discuss actionable solutions</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Formspree Form - Integration is active but hidden -->
+                    <form id="audit-form" action="https://formspree.io/f/meozwzvp" method="POST">
+                        <input type="hidden" name="_subject" value="New NexusWealthAI Audit Submission">
+                        <input type="hidden" name="_replyto" value="abdessamadthegamer@gmail.com">
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="business" placeholder="Business Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">Average No-Show Rate (%)</label>
+                            <input type="number" name="no_show_rate" min="0" max="100" placeholder="e.g., 15" required>
+                        </div>
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">Staff Hours Spent Daily on Scheduling</label>
+                            <input type="number" name="staff_hours" min="0" max="24" placeholder="e.g., 3" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-secondary" style="width: 100%;">Get My Free Audit Now</button>
+                        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.9;">By submitting, you agree to receive your audit report and understand an experienced consultant may contact you.</p>
+                    </form>
+                    
+                    <div id="success-message">
+                        <i class="fas fa-check-circle" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <h3>Thank You for Submitting!</h3>
+                        <p>Your audit report is being generated and will be sent to your email shortly.</p>
+                        <p>An experienced consultant will contact you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Section -->
+    <section class="value-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transform Your Business Operations</h2>
+                <p>Our efficiency audit provides actionable insights to improve your operations</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Recover Lost Revenue</h3>
+                    <p>Identify and plug the leaks in your revenue stream caused by inefficiencies</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Reclaim Staff Time</h3>
+                    <p>Free up hours each day by optimizing scheduling and administrative tasks</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Reduce Missed Opportunities</h3>
+                    <p>Implement systems to minimize missed appointments and maximize productivity</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Streamline Operations</h3>
+                    <p>Create more efficient workflows that reduce stress and increase productivity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Austin Businesses</h2>
+            </div>
+            
+            <div class="trust-badge">
+                <div class="points-grid">
+                    <div>
+                        <h3><i class="fas fa-map-marker-alt text-primary"></i> Local Focus</h3>
+                        <p>We understand the unique challenges Austin businesses face in today's economy.</p>
+                    </div>
+                    <div>
+                        <h3><i class="fas fa-chart-pie text-primary"></i> Specialized Insight</h3>
+                        <p>This audit is designed specifically to uncover revenue leaks in service-based businesses.</p>
+                    </div>
+                    <div>
+                        <h3><i class="fas fa-chart-line text-primary"></i> Data-Driven Results</h3>
+                        <p>Our methodology provides quantifiable insights you can act on immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-container">
+                <h2>Ready to Stop Losing Money & Wasting Time?</h2>
+                <p>Claim your FREE Business Efficiency Audit now. Discover your hidden revenue leaks and take the first step toward a more efficient operation.</p>
+                <a href="#audit" class="btn btn-primary" style="margin: 30px 0 15px; background: white; color: var(--primary);">Yes! Show Me My Revenue Leaks - FREE Audit</a>
+                <p>100% Free • No Credit Card Required • Takes Just 2 Minutes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>Is this really free?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! The audit and personalized report are completely free. There's no cost to you for this assessment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens after I take the audit?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll receive your personalized report via email immediately. Additionally, an experienced consultant will review your audit results and contact you directly to discuss actionable solutions for your business.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is my data safe?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We respect your privacy. Your individual data will be kept confidential. View our detailed <a href="#" style="color: var(--primary);">Privacy Policy</a>.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does the audit take?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Less than 2 minutes! We only ask 5-7 key questions about your business metrics that you should be able to answer immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="audit-section" style="padding: 60px 0;">
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <a href="mailto:contact@nexuswealthai.com" class="contact-email">
+                    <i class="fas fa-envelope"></i>
+                    contact@nexuswealthai.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="#" class="footer-logo">NexusWealthAI</a>
+                    <p>Helping businesses reclaim lost revenue and optimize operations through data-driven insights.</p>
+                </div>
+                
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: white; text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#audit" style="color: white; text-decoration: none;">Free Audit</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: white; text-decoration: none;">Privacy Policy</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: white; text-decoration: none;">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Contact</h4>
+                    <a href="mailto:contact@nexuswealthai.com" style="color: white; text-decoration: none; display: block; margin-bottom: 10px;">
+                        <i class="fas fa-envelope"></i> contact@nexuswealthai.com
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 NexusWealthAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('audit-form').addEventListener('submit', function(e) {
+            // Show success message
+            document.getElementById('success-message').style.display = 'block';
+            
+            // Hide form
+            this.style.display = 'none';
+            
+            // Scroll to success message
+            document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+            
+            // Continue with Formspree submission
+            // The form will submit normally to Formspree
+        });
+        
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentNode;
+                faqItem.classList.toggle('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
