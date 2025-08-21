@@ -1173,7 +1173,7 @@
                         </button>
                         
                         <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 16px; text-align: center;">
-                            🔒 Your information is secure and will never be shared. By submitting, you agree to receive your personalized analysis and understand that a revenue optimization specialist may contact you to discuss your results.
+                            🔒 Your information is secure and will never be shared. By submitting, you agree to receive your personalized analysis and understand that a revenue optimization specialist may contact you to discuss your results. View our <a href="privacy-policy.html" style="color: var(--primary); text-decoration: none;">Privacy Policy</a>.
                         </p>
                     </form>
                     
@@ -1298,7 +1298,9 @@
             </div>
             
             <div style="border-top: 1px solid var(--gray-800); padding-top: 32px; text-align: center; color: var(--gray-400);">
-                <p>&copy; 2023 NexusWealthAI. All rights reserved. | <a href="#" style="color: var(--gray-400);">Privacy Policy</a> | <a href="#" style="color: var(--gray-400);">Terms of Service</a></p>
+                <div style="border-top: 1px solid var(--gray-800); padding-top: 32px; text-align: center; color: var(--gray-400);">
+                <p>&copy; 2023 NexusWealthAI. All rights reserved. | <a href="privacy-policy.html" style="color: var(--gray-400);">Privacy Policy</a> | <a href="terms.html" style="color: var(--gray-400);">Terms of Service</a></p>
+            </div>
             </div>
         </div>
     </footer>
@@ -1313,16 +1315,9 @@
             submitBtn.innerHTML = '<div class="loading-spinner"></div> Processing Your Analysis...';
             submitBtn.disabled = true;
             
-            // Show success message after a brief delay
+            // Redirect to thank you page after form submission
             setTimeout(() => {
-                document.getElementById('success-message').style.display = 'block';
-                this.style.display = 'none';
-                
-                // Scroll to success message
-                document.getElementById('success-message').scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'center'
-                });
+                window.location.href = 'thank-you.html';
             }, 1500);
             
             // Continue with Formspree submission
