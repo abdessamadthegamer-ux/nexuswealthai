@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NexusWealthAI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0066ff;
+            --primary-dark: #0052cc;
+            --secondary: #00d4aa;
+            --accent: #ff6b35;
+            --dark: #0a0a0a;
+            --gray-900: #1a1a1a;
+            --gray-800: #2a2a2a;
+            --gray-700: #404040;
+            --gray-600: #666666;
+            --gray-400: #999999;
+            --gray-200: #e5e5e5;
+            --gray-100: #f5f5f5;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #0066ff 0%, #00d4aa 100%);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .logo-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            margin-right: 12px;
+        }
+        
+        .logo-icon i {
+            color: var(--white);
+            font-size: 24px;
+        }
+        
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--primary-dark);
+            transform: translateX(-5px);
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+        
+        .policy-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        
+        .policy-header h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .last-updated {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            background: var(--gray-100);
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        .policy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .policy-section {
+            margin-bottom: 40px;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+        }
+        
+        .policy-section h2 {
+            color: var(--dark);
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .policy-section h3 {
+            color: var(--gray-900);
+            font-size: 1.25rem;
+            margin: 24px 0 12px 0;
+        }
+        
+        .policy-section p {
+            margin-bottom: 16px;
+            color: var(--gray-700);
+            font-size: 1rem;
+        }
+        
+        .policy-section ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        
+        .policy-section li {
+            margin-bottom: 8px;
+            color: var(--gray-700);
+        }
+        
+        .highlight-box {
+            background: var(--gray-100);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .contact-box {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .contact-box h3 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        
+        .contact-email {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-email:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .main-content {
+                padding: 60px 0;
+            }
+            
+            .policy-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .policy-section {
+                padding: 24px 20px;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    NexusWealthAI
+                </a>
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="policy-header">
+                <h1>Privacy Policy</h1>
+                <div class="last-updated">
+                    Last Updated: December 2023
+                </div>
+            </div>
+
+            <div class="policy-content">
+                <div class="policy-section">
+                    <h2>1. Introduction</h2>
+                    <p>At NexusWealthAI ("we," "our," or "us"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our business intelligence services and website.</p>
+                    
+                    <div class="highlight-box">
+                        <strong>Your Trust Matters:</strong> We understand that you're sharing sensitive business information with us. This policy outlines our commitment to keeping that information secure and using it only for the purposes you've authorized.
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2>2. Information We Collect</h2>
+                    
+                    <h3>Personal Information</h3>
+                    <p>When you request our business analysis, we collect:</p>
+                    <ul>
+                        <li>Name and contact information (email address)</li>
+                        <li>Company name and industry</li>
+                        <li>Business metrics (revenue range, team size, marketing spend)</li>
+                        <li>Business challenges and operational information</li>
+                    </ul>
+                    
+                    <h3>Automatically Collected Information</h3>
+                    <ul>
+                        <li>IP address and location data</li>
+                        <li>Browser type and version</li>
+                        <li>Device information</li>
+                        <li>Website usage data and analytics</li>
+                        <li>Cookies and similar tracking technologies</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>3. How We Use Your Information</h2>
+                    <p>We use your information for the following purposes:</p>
+                    <ul>
+                        <li><strong>Service Delivery:</strong> To provide your personalized business analysis and recommendations</li>
+                        <li><strong>Communication:</strong> To contact you about your analysis results and follow-up consultations</li>
+                        <li><strong>Service Improvement:</strong> To enhance our analysis algorithms and service quality</li>
+                        <li><strong>Marketing:</strong> To send you relevant business insights and service updates (with your consent)</li>
+                        <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>4. Information Sharing and Disclosure</h2>
+                    <p>We may share your information in the following circumstances:</p>
+                    
+                    <h3>Service Providers</h3>
+                    <p>We may share information with trusted third-party service providers who assist us in:</p>
+                    <ul>
+                        <li>Email delivery and communication services</li>
+                        <li>Data analysis and business intelligence tools</li>
+                        <li>Customer relationship management</li>
+                        <li>Website hosting and technical infrastructure</li>
+                    </ul>
+                    
+                    <h3>Business Partners</h3>
+                    <p>With your explicit consent, we may share your information with qualified marketing agencies and business service providers who can help implement our recommendations.</p>
+                    
+                    <h3>Legal Requirements</h3>
+                    <p>We may disclose information if required by law, court order, or government regulations.</p>
+                    
+                    <div class="highlight-box">
+                        <strong>Important:</strong> We never sell your personal information to third parties for their marketing purposes without your explicit consent.
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2>5. Data Security</h2>
+                    <p>We implement industry-standard security measures to protect your information:</p>
+                    <ul>
+                        <li><strong>Encryption:</strong> All data transmission is encrypted using SSL/TLS technology</li>
+                        <li><strong>Secure Storage:</strong> Your data is stored on secure servers with restricted access</li>
+                        <li><strong>Access Controls:</strong> Only authorized personnel have access to your information</li>
+                        <li><strong>Regular Audits:</strong> We conduct regular security assessments and updates</li>
+                        <li><strong>Data Backup:</strong> Secure backup systems ensure data integrity and availability</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>6. Your Rights and Choices</h2>
+                    <p>You have the following rights regarding your personal information:</p>
+                    
+                    <h3>Access and Correction</h3>
+                    <p>You can request access to your personal information and ask us to correct any inaccuracies.</p>
+                    
+                    <h3>Data Portability</h3>
+                    <p>You can request a copy of your data in a commonly used, machine-readable format.</p>
+                    
+                    <h3>Deletion</h3>
+                    <p>You can request deletion of your personal information, subject to certain legal limitations.</p>
+                    
+                    <h3>Marketing Communications</h3>
+                    <p>You can opt out of marketing communications at any time by clicking the unsubscribe link in our emails or contacting us directly.</p>
+                    
+                    <h3>Cookies</h3>
+                    <p>You can control cookie settings through your browser preferences.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>7. Data Retention</h2>
+                    <p>We retain your information for as long as necessary to:</p>
+                    <ul>
+                        <li>Provide our services and support</li>
+                        <li>Comply with legal obligations</li>
+                        <li>Resolve disputes and enforce agreements</li>
+                        <li>Improve our services and analysis capabilities</li>
+                    </ul>
+                    <p>Typically, we retain business analysis data for 3 years unless you request earlier deletion or legal requirements mandate longer retention.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>8. International Data Transfers</h2>
+                    <p>If you are located outside the United States, please note that we may transfer your information to and process it in the United States. We ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>9. Children's Privacy</h2>
+                    <p>Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18. If we become aware that we have collected such information, we will take steps to delete it promptly.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>10. Updates to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by:</p>
+                    <ul>
+                        <li>Posting the updated policy on our website</li>
+                        <li>Sending you an email notification
