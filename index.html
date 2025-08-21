@@ -1066,8 +1066,6 @@
                     <form id="audit-form" action="https://formspree.io/f/meozwzvp" method="POST">
                         <input type="hidden" name="_subject" value="Premium Business Intelligence Request - NexusWealthAI">
                         <input type="hidden" name="_replyto" value="contact@nexuswealthai.com">
-                        <input type="hidden" name="_next" value="https://nexuswealthai.com/thank-you.html">
-                        <input type="hidden" name="_redirect" value="https://nexuswealthai.com/thank-you.html">
                         
                         <div class="form-grid">
                             <div class="form-group">
@@ -1297,14 +1295,38 @@
     <script>
         // Enhanced form submission handling for custom redirect
         document.getElementById('audit-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
             const submitBtn = this.querySelector('button[type="submit"]');
+            const formData = new FormData(this);
             
             // Show loading state
             submitBtn.innerHTML = '<div class="loading-spinner"></div> Processing Your Analysis...';
             submitBtn.disabled = true;
             
-            // Let Formspree handle the redirect to thank-you.html
-            // The _next parameter will automatically redirect after form submission
+            // Submit to Formspree via fetch
+            fetch('https://formspree.io/f/meozwzvp', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Redirect to your thank you page
+                    window.location.href = 'https://nexuswealthai.com/thank-you.html';
+                } else {
+                    // Handle error
+                    alert('There was an error submitting the form. Please try again.');
+                    submitBtn.innerHTML = '<i class="fas fa-chart-line"></i> Get My Free Revenue Analysis ($2,500 Value)';
+                    submitBtn.disabled = false;
+                }
+            }).catch(error => {
+                // Handle network error
+                alert('There was an error submitting the form. Please try again.');
+                submitBtn.innerHTML = '<i class="fas fa-chart-line"></i> Get My Free Revenue Analysis ($2,500 Value)';
+                submitBtn.disabled = false;
+            });
         });
         
         // Smooth scrolling for anchor links
