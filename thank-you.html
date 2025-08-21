@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - NexusWealthAI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0066ff;
+            --primary-dark: #0052cc;
+            --secondary: #00d4aa;
+            --accent: #ff6b35;
+            --dark: #0a0a0a;
+            --gray-900: #1a1a1a;
+            --gray-800: #2a2a2a;
+            --gray-700: #404040;
+            --gray-600: #666666;
+            --gray-400: #999999;
+            --gray-200: #e5e5e5;
+            --gray-100: #f5f5f5;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #0066ff 0%, #00d4aa 100%);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 64px rgba(0, 0, 0, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background: var(--gradient-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        .thank-you-container {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 80px 60px;
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .thank-you-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+        
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            animation: success-bounce 1s ease-out;
+            position: relative;
+        }
+        
+        .success-icon::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.3;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes success-bounce {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.1; }
+        }
+        
+        .success-icon i {
+            font-size: 60px;
+            color: var(--white);
+        }
+        
+        .thank-you-title {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .thank-you-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .next-steps {
+            background: var(--gray-100);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            color: var(--dark);
+            margin-bottom: 24px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-number {
+            background: var(--gradient-primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 16px;
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+        
+        .step-content h4 {
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .step-content p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+        
+        .value-highlight {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 32px;
+            border-radius: 16px;
+            margin: 32px 0;
+        }
+        
+        .value-highlight h3 {
+            color: var(--white);
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+        
+        .value-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 8px;
+        }
+        
+        .value-description {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info {
+            background: var(--gray-100);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+        }
+        
+        .contact-info h4 {
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+        
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-email:hover {
+            transform: translateY(-2px);
+            color: var(--primary-dark);
+        }
+        
+        .social-proof {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .proof-item {
+            text-align: center;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+        }
+        
+        .proof-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .proof-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-container {
+                padding: 60px 30px;
+                margin: 20px;
+            }
+            
+            .thank-you-title {
+                font-size: 2.5rem;
+            }
+            
+            .social-proof {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .value-amount {
+                font-size: 2.5rem;
+            }
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.05;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="floating-elements">
+            <div class="floating-element">
+                <i class="fas fa-chart-line" style="font-size: 60px; color: var(--primary);"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-lightbulb" style="font-size: 40px; color: var(--secondary);"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-rocket" style="font-size: 50px; color: var(--accent);"></i>
+            </div>
+        </div>
+        
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        
+        <h1 class="thank-you-title">Thank You!</h1>
+        <p class="thank-you-subtitle">Your premium business intelligence analysis request has been received and is being processed by our AI-powered system.</p>
+        
+        <div class="value-highlight">
+            <h3>You've Just Claimed</h3>
+            <div class="value-amount">$2,500</div>
+            <div class="value-description">Worth of Premium Business Intelligence Analysis - Completely Free</div>
+        </div>
+        
+        <div class="next-steps">
+            <h3>What Happens Next?</h3>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>AI Analysis in Progress</h4>
+                    <p>Our advanced AI system is analyzing your business data against 50+ revenue optimization metrics.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Report Delivery (Next 30 Minutes)</h4>
+                    <p>Your personalized revenue optimization report will be delivered to your inbox with specific opportunities identified.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Expert Consultation (Within 24 Hours)</h4>
+                    <p>A senior revenue optimization specialist will review your analysis and contact you to discuss implementation strategies.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="social-proof">
+            <div class="proof-item">
+                <span class="proof-number">$127K</span>
+                <span class="proof-label">Avg. Revenue Recovered</span>
+            </div>
+            <div class="proof-item">
+                <span class="proof-number">94%</span>
+                <span class="proof-label">Client Satisfaction</span>
+            </div>
+            <div class="proof-item">
+                <span class="proof-number">30 Days</span>
+                <span class="proof-label">To See Results</span>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <h4>Questions? We're Here to Help</h4>
+            <a href="mailto:contact@nexuswealthai.com" class="contact-email">
+                <i class="fas fa-envelope"></i>
+                contact@nexuswealthai.com
+            </a>
+        </div>
+        
+        <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 32px;">
+            <strong>Important:</strong> Please check your email (including spam folder) for your personalized analysis report. Add our email to your contacts to ensure delivery.
+        </p>
+    </div>
+</body>
+</html>
