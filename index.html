@@ -9,8 +9,7 @@
   <title>Nexus Wealth AI – Elite AI Tools & Lead Generation for Small Business</title>
 
   <style>
-    /* Elegant premium styling */
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&family=Great+Vibes&display=swap');
 
     * {
       box-sizing: border-box;
@@ -26,17 +25,41 @@
     }
 
     header {
-      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-      color: #fff;
-      padding: 3.5rem 2rem 4rem 2rem;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 2.8rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
+      position: relative;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1a2a6ccc, #b21f1fcc, #fdbb2dcc);
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
       user-select: none;
+      overflow: hidden;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      opacity: 0.12;
+      z-index: 0;
+      filter: brightness(0.75);
+    }
+
+    header h1 {
+      position: relative;
+      margin: 0;
+      font-family: 'Great Vibes', cursive;
+      font-weight: 700;
+      font-size: 3.8rem;
+      color: white;
+      text-shadow: 0 0 12px rgba(0,0,0,0.45);
+      user-select: text;
+      max-width: 900px;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
     }
 
     nav {
@@ -140,6 +163,16 @@
       outline: none;
     }
 
+    img.premium-img {
+      display: block;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      margin: 2.5rem auto;
+      user-select: none;
+      pointer-events: none;
+    }
+
     .btn-download {
       display: inline-block;
       margin-top: 2rem;
@@ -239,11 +272,21 @@
         max-width: none;
         font-size: 0.9rem;
       }
+
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      img.premium-img {
+        margin: 2rem 0;
+      }
     }
   </style>
 </head>
 <body>
-  <header>Nexus Wealth AI - Elite AI Tools & Lead Generation for Small Business</header>
+  <header>
+    <h1>Nexus Wealth AI<br /><em>Elevate. Automate. Prosper.</em></h1>
+  </header>
 
   <nav aria-label="Primary site navigation">
     <button id="nav-home" class="active" aria-controls="home" aria-selected="true" type="button">Home</button>
@@ -259,81 +302,74 @@
     <!-- Home Section -->
     <section id="home" class="active" role="region" aria-labelledby="title-home" tabindex="-1">
       <h2 id="title-home">How Cutting-Edge AI Transforms Small Businesses & Solo Entrepreneurs</h2>
-      <p>In today's fast-evolving digital economy, leveraging <strong>artificial intelligence (AI)</strong> tools is essential for <strong>small businesses and solo entrepreneurs</strong> who want to scale fast, optimize operations, and capture high-quality leads faster than ever before.</p>
-      <p>Leading AI-powered platforms like <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n</a> empower entrepreneurs with <strong>workflow automation</strong> capabilities that streamline <em>lead generation, marketing, customer follow-ups</em>, and data management with zero coding required.</p>
-      <p>Other complementary AI tools, including <a href="https://jasper.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Jasper AI</a>, <a href="https://getresponse.com" target="_blank" rel="noopener noreferrer" class="affiliate">GetResponse</a>, and <a href="https://copy.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Copy.ai</a>, automate content creation, SEO optimization, and sales copywriting — major boosts to your digital presence and sales funnel.</p>
-      
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1050&q=80" alt="Small business owner using AI tools on laptop" class="premium-img" />
+      <p>In today’s fast-evolving digital economy, leveraging <strong>artificial intelligence (AI)</strong> tools isn’t just a competitive advantage — it’s a necessity. Small businesses and solo entrepreneurs who embrace <strong>AI-driven automation</strong>, smart marketing techniques, and data-driven workflows experience accelerated growth and operational excellence.</p>
+      <p>Innovative platforms like <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n</a> offer no-code <strong>workflow automation</strong> to simplify complex processes like lead generation, customer relationship management, and marketing campaigns — all without a steep technical learning curve. This empowers owners to focus on strategy while AI handles repetitive yet crucial tasks.</p>
+      <p>Supplementary AI tools such as <a href="https://jasper.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Jasper AI</a> &mdash; an industry-leading content creator &mdash; <a href="https://getresponse.com" target="_blank" rel="noopener noreferrer" class="affiliate">GetResponse’s</a> robust marketing automation, and <a href="https://copy.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Copy.ai’s</a> cutting-edge copywriting capabilities enhance every segment of the digital sales process.</p>
       <h3>Why AI Tools Are Game-Changers for Small Business Owners</h3>
       <ul>
-        <li><strong>Automation of repetitive tasks:</strong> Save dozens of work hours weekly, focusing on growth activities instead of mundane admin.</li>
-        <li><strong>Smart lead generation:</strong> Utilize AI to deliver highly targeted leads already qualified and nurtured through automated workflows.</li>
-        <li><strong>Instant content creation:</strong> Generate SEO optimized blogs, ad creatives, and social content designed to rank and convert.</li>
-        <li><strong>Cost-effective marketing:</strong> Cut high agency fees by building DIY AI-powered marketing and sales funnels at a fraction of the cost.</li>
+        <li><strong>Automation of routine tasks:</strong> Free up dozens of weekly hours by automating email responses, social media posts, and customer support touchpoints.</li>
+        <li><strong>Enhanced lead quality:</strong> Use AI-powered analytics and lead scoring to identify and focus on prospects with the highest conversion potential.</li>
+        <li><strong>Scalable content strategies:</strong> Rapidly generate <em>SEO-optimized articles</em>, ad creatives, and intelligent chatbot content that converts visitors into loyal customers.</li>
+        <li><strong>Cost savings and ROI:</strong> Replace expensive marketing agencies with affordable AI tools that amplify your reach, accuracy, and personalization.</li>
       </ul>
-      <p>Harnessing the synergy of these technologies at <strong>Nexus Wealth AI</strong> is your gateway to business efficiency, profitable automation, and a thriving online presence.</p>
+      <p>Partnering these technologies with <strong>Nexus Wealth AI</strong> connects you directly to the resources, tutorials, and affiliate programs that pave the path to automated entrepreneurial success.</p>
     </section>
 
     <!-- AI Tools Section -->
     <section id="tools" role="region" aria-labelledby="title-tools" tabindex="-1">
       <h2 id="title-tools">Elite AI Tools To Automate & Scale Your Small Business</h2>
-      <p>Maximize your operational efficiency and sales pipeline with AI tools designed for flexibility and power:</p>
+      <img src="https://images.unsplash.com/photo-1581090700227-e523439095bd?auto=format&fit=crop&w=1050&q=80" alt="Abstract digital interface showing AI workflow automation" class="premium-img" />
+      <p>Choosing the right AI platforms can revolutionize how you generate leads, manage customers, and create marketing content. Here are some of the top AI-powered tools designed for seamless integration and maximum ROI:</p>
       <ul>
-        <li>
-          <strong><a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n Automation Platform</a>:</strong> Open-source and no-code AI and workflow automation software. Build customized lead generation, data integrations, and marketing auto-responders that work 24/7 without oversight.
-        </li>
-        <li>
-          <strong><a href="https://getresponse.com" target="_blank" rel="noopener noreferrer" class="affiliate">GetResponse AI</a>:</strong> AI-powered marketing platform for smart emails, landing pages, and automation workflows. Designed to convert visitors into customers with persuasive AI-generated copy.
-        </li>
-        <li>
-          <strong><a href="https://jasper.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Jasper AI</a>:</strong> Revolutionize your content strategy with Jasper's AI writing assistant — create unbeatable blog posts, SEO descriptions, ads, and social captions with unprecedented speed.
-        </li>
-        <li>
-          <strong><a href="https://copy.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Copy.ai</a>:</strong> AI copywriting that helps craft compelling product descriptions, sales pages, and targeted social media campaigns that drive buyer action.
-        </li>
+        <li><strong><a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n Automation Platform</a>:</strong> Open-source no-code solution trusted by businesses worldwide for crafting <strong>customizable workflows</strong> that connect APIs, AI models, and CRMs — enabling fully automated lead capture, enrichment, and nurturing pipelines.</li>
+        <li><strong><a href="https://getresponse.com" target="_blank" rel="noopener noreferrer" class="affiliate">GetResponse AI</a>:</strong> A comprehensive marketing suite that leverages artificial intelligence to produce <strong>targeted emails</strong> and <strong>landing pages</strong>. Its AI-driven sales funnel builder offers personalized customer engagement strategies proven to amplify conversions.</li>
+        <li><strong><a href="https://jasper.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Jasper AI</a>:</strong> This AI writer assists in crafting <strong>SEO-optimized blog posts</strong>, well-researched articles, and persuasive ad copy faster than traditional methods — crucial for boosting organic traffic and social media impact.</li>
+        <li><strong><a href="https://copy.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Copy.ai</a>:</strong> Specialized in <strong>automated copywriting</strong> for product descriptions, landing pages, and dynamic social ads that speak directly to your target buyers, leveraging data-driven language models.</li>
       </ul>
-      <p>Integrate these AI tools using automated workflows and watch your business lead generation, conversion rates, and customer engagement soar with reduced workload.</p>
+      <p>By combining these powerful AI tools into integrated workflows using platforms like n8n, entrepreneurs can achieve lasting efficiency, scalability, and consistently growing lead flow with minimal manual effort.</p>
     </section>
 
     <!-- Long-Form Article Section -->
     <section id="article" role="region" aria-labelledby="title-article" tabindex="-1">
       <h2 id="title-article">How AI Tools Revolutionize Lead Generation and Business Growth for Small Businesses and Solo Entrepreneurs</h2>
-      <p>Artificial Intelligence (AI) is no longer just a buzzword — it's a transformative force reshaping how small businesses and solo entrepreneurs operate, market, and scale. In this comprehensive article, dive deep into why smart AI adoption, featuring platforms like <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n workflow automation</a>, <a href="https://jasper.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Jasper AI content creation</a>, and other key players, is your secret weapon to building a thriving business.</p>
-
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1050&q=80" alt="Entrepreneur using AI technology to plan business growth" class="premium-img" />
+      <p>Artificial Intelligence (AI) has become a catalyst for profound change in the small business landscape. What was once reserved for large enterprises is now accessible to solo entrepreneurs and small teams via user-friendly, affordable AI platforms.</p>
+      <p>At the core of successful AI adoption is an understanding of its immense potential for <strong>lead generation automation</strong> — the process of identifying, qualifying, and nurturing business prospects without human bias or delay. Tools like <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n’s workflow automation</a> have transformed this area by providing agile and customizable no-code environments where entrepreneurs can connect various AI services with their CRM, email marketing platforms, and social media accounts.</p>
       <h3>The Demand for Efficient Lead Generation</h3>
-      <p>Lead generation is the lifeblood of any successful small business, but traditional methods are time-consuming and often ineffective. AI-powered lead generation tools now identify, qualify, and nurture prospects automatically, freeing entrepreneurs from tedious manual efforts. Platforms that integrate AI with <strong>workflow automation</strong>—like <a href="https://n8n.io/workflows" target="_blank" rel="noopener noreferrer" class="affiliate">n8n's AI workflows</a>—allow personalized communication sequences that adapt dynamically based on customer interactions.</p>
-
+      <p>Traditional lead generation methods are labor-intensive, error-prone, and often fail to scale. Modern AI-driven systems can not only collect leads from multiple online channels but also analyze behavior signals and refine targeting criteria dynamically, ensuring resources focus on the most promising customers.</p>
+      <p>Platforms like n8n allow seamless integration with CRM systems such as HubSpot, Salesforce, or Zoho, automating the lead qualification process and enabling <em>smart drip campaigns</em> that improve engagement rates and speed conversion cycles. This methodology improves operational agility, customer satisfaction, and revenue predictability.</p>
       <h3>Unlocking the Power of n8n for Workflow Automation</h3>
-      <p>n8n stands out as a no-code, powerful automation tool that connects numerous apps and APIs. Its AI extensions empower small businesses to:</p>
+      <p>n8n stands out in the AI automation space for several reasons:</p>
       <ul>
-        <li>Automate tedious lead data collection and enrichment.</li>
-        <li>Integrate CRM systems to sync prospects and sales pipelines effortlessly.</li>
-        <li>Create intelligent follow-ups and drip campaigns without manual intervention.</li>
-        <li>Combine AI-driven content generation (e.g. Jasper, Copy.ai) with automation for flawless marketing execution.</li>
+        <li>No code, visual interface for designing intricate workflows.</li>
+        <li>Over 300+ pre-built integrations, including AI models like OpenAI’s GPT series.</li>
+        <li>Extensive support for API calls, webhooks, and data transformation.</li>
+        <li>Open-source licensing allowing affordability and transparency.</li>
       </ul>
-      <p>By deploying n8n, small businesses can reduce human errors, speed up sales cycles, and gain a competitive edge in digital marketing efficiency.</p>
-
+      <p>Small businesses leverage these features to automate routine lead management tasks, send personalized email sequences, trigger SMS reminders, and even generate AI-crafted content merges — all designed to delight customers and close deals efficiently.</p>
       <h3>Benefits of AI Content Creation for Small Business SEO</h3>
-      <p>Generating SEO-optimized content quickly is a major hurdle for solo entrepreneurs. AI content tools like Jasper and Copy.ai help solve this by producing keyword-rich blogs, ad copy, and social media posts designed to rank higher. This translates into visible growth in organic traffic, better engagement rates, and increased conversions.</p>
-
+      <p>Achieving top search engine rankings requires consistent, high-quality SEO content — a challenge for solo entrepreneurs juggling multiple tasks. AI content generators like Jasper AI and Copy.ai reduce the burden by producing keyword-optimized articles tailored to search intent and engagement metrics.</p>
+      <p>This dynamic approach turns blogs, product descriptions, and social posts into powerful organic traffic engines, enhancing brand visibility and accelerating lead acquisition without expanding human resource overhead.</p>
       <h3>Affiliate Marketing: Monetizing AI Tools Effectively</h3>
-      <p>Affiliate marketing within the AI niche is booming, and promoting trusted AI tools helps not only business growth but also passive income creation. By recommending platforms like n8n, Jasper AI, and GetResponse, affiliate marketers build credibility while earning lucrative commissions. This synergistic model elevates Nexus Wealth AI’s role as both an educational resource and credible affiliate partner.</p>
-
+      <p>The surge of interest in AI tools creates a lucrative niche for affiliate marketers dedicated to promoting these innovations. Trusted platforms such as n8n, Jasper AI, and GetResponse provide competitive affiliate commissions, allowing marketers to generate passive income while educating business owners.</p>
+      <p>This synergy boosts Nexus Wealth AI’s credibility as an educational hub and affiliate partner, further empowering entrepreneurs to adopt and monetize smart AI technologies efficiently.</p>
       <h3>Crafting Your AI-Powered Business Ecosystem</h3>
-      <p>The future of small business growth hinges on adopting an ecosystem approach — integrating various AI tools and automations seamlessly. Nexus Wealth AI offers the ultimate resource to master this ecosystem with expert advice, carefully curated eBooks, and affiliate partnerships designed to upgrade your business strategy with minimum fuss and maximum impact.</p>
-
-      <p>Embrace the AI revolution today, automate smartly, market effectively, and convert leads like never before.</p>
+      <p>True digital transformation requires integrating multiple AI systems into a cohesive business ecosystem. Using platforms like Nexus Wealth AI to gain insights, implement handy eBooks, and access affiliate deals ensures you connect the dots smoothly — turning disparate tools into a unified engine of growth and innovation.</p>
+      <p>Embrace AI today to automate strategically, communicate personally, and convert systematically, outpacing competition while reducing operational complexity.</p>
     </section>
 
     <!-- eBook Section -->
     <section id="ebook" role="region" aria-labelledby="title-ebook" tabindex="-1">
       <h2 id="title-ebook">Exclusive eBook: Master AI Automation & Lead Generation for Your Small Business</h2>
+      <img src="https://images.unsplash.com/photo-1581090700227-e523439095bd?auto=format&fit=crop&w=1050&q=80" alt="Digital eBook cover about AI automation for small business" class="premium-img" />
       <p>Elevate your entrepreneurial game with our expertly crafted eBook that covers:</p>
       <ul>
-        <li>In-depth breakdown of top AI marketing and automation platforms</li>
+        <li>Comprehensive AI marketing and automation platform breakdowns</li>
         <li>Step-by-step guides to building powerful lead gen workflows with n8n</li>
         <li>Proven affiliate marketing strategies to monetize AI technologies</li>
         <li>SEO content creation tips using Jasper and Copy.ai</li>
-        <li>Insights on scaling solo entrepreneur operations with AI</li>
+        <li>Insights on scaling solo entrepreneurial operations effectively with AI</li>
       </ul>
       <a href="NexusWealthAI_eBook.pdf" download class="btn-download" aria-label="Download the free AI small business eBook">Download Your Free eBook</a>
     </section>
@@ -383,7 +419,6 @@
   </footer>
 
   <script>
-    // Enhanced SPA-like navigation with ARIA focus management
     const sections = ['home', 'tools', 'article', 'ebook', 'privacy', 'terms', 'contact'];
     const navButtons = sections.map(id => document.getElementById('nav-' + id));
     const sectionElems = sections.map(id => document.getElementById(id));
@@ -409,7 +444,6 @@
       btn.addEventListener('click', () => activateSection(idx));
     });
 
-    // Contact form submission - simulate sending, no backend
     const form = document.getElementById('contactForm');
     const statusDiv = document.getElementById('formStatus');
     form.addEventListener('submit', e => {
