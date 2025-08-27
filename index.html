@@ -1,575 +1,398 @@
-<p>The democratization of business intelligence will continue accelerating. Trends to watch:</p>
-                    <ul>
-                        <li>No-code BI platforms that require zero technical knowledge</li>
-                        <li>Real-time AI recommendations based on business performance</li>
-                        <li>Integration with IoT devices for comprehensive business monitoring</li>
-                        <li>Blockchain-based data verification for trusted analytics</li>
+<!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content fade-in-up">
+                <h2>Ready to Discover Your Hidden Revenue?</h2>
+                <p style="font-size: 1.25rem; margin-bottom: 40px; opacity: 0.9;">Don't let another month pass while revenue opportunities slip away. Get your free analysis now and start capturing the profit that's already within your business.</p>
+                
+                <a href="#audit" class="btn btn-secondary" style="font-size: 18px; padding: 20px 40px; margin-bottom: 32px;">
+                    <i class="fas fa-rocket"></i>
+                    Claim My Free $2,500 Analysis
+                </a>
+                
+                <div style="display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">2 Minutes</div>
+                        <div style="opacity: 0.8;">To Complete</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">$0</div>
+                        <div style="opacity: 0.8;">Investment Required</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">$50K+</div>
+                        <div style="opacity: 0.8;">Potential Monthly Impact</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: var(--white); padding: 80px 0 40px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                        <div class="logo-icon" style="margin-right: 12px;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span style="font-size: 24px; font-weight: 700; font-family: 'Playfair Display', serif;">NexusWealthAI</span>
+                    </div>
+                    <p style="color: var(--gray-400); line-height: 1.6;">Transforming businesses through AI-powered revenue intelligence and strategic optimization.</p>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 20px; color: var(--white);">Services</h4>
+                    <ul style="list-style: none; color: var(--gray-400);">
+                        <li style="margin-bottom: 8px;">Revenue Analysis</li>
+                        <li style="margin-bottom: 8px;">Business Intelligence</li>
+                        <li style="margin-bottom: 8px;">Strategic Consulting</li>
+                        <li style="margin-bottom: 8px;">Implementation Support</li>
                     </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 20px; color: var(--white);">Contact</h4>
+                    <p style="color: var(--gray-400); margin-bottom: 12px;">
+                        <i class="fas fa-envelope" style="margin-right: 8px; color: var(--primary);"></i>
+                        contact@nexuswealthai.com
+                    </p>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid var(--gray-800); padding-top: 32px; text-align: center; color: var(--gray-400);">
+                <p>&copy; 2023 NexusWealthAI. All rights reserved. | <a href="privacy-policy.html" style="color: var(--gray-400);">Privacy Policy</a> | <a href="terms.html" style="color: var(--gray-400);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
 
-                    <p>Solo entrepreneurs who invest in BI capabilities today will be positioned to take advantage of these emerging technologies as they mature.</p>
+    <script>
+        // Blog filtering functionality
+        function filterBlog(category) {
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.background = 'var(--white)';
+                btn.style.color = 'var(--gray-600)';
+                btn.style.borderColor = 'var(--gray-200)';
+            });
+            
+            event.target.classList.add('active');
+            event.target.style.background = 'var(--primary)';
+            event.target.style.color = 'var(--white)';
+            event.target.style.borderColor = 'var(--primary)';
+            
+            // Filter articles
+            document.querySelectorAll('.blog-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
 
-                    <h2>Taking Action: Your Next Steps</h2>
+        // Article content database
+        const articles = {
+            'automation-small-business': {
+                title: 'How n8n and AI Automation Transform Small Business Operations',
+                category: 'AI Automation',
+                date: 'January 15, 2024',
+                readTime: '8 min read',
+                content: `
+                    <div style="padding: 60px 40px;">
+                        <div style="text-align: center; margin-bottom: 40px;">
+                            <span style="background: var(--secondary); color: var(--white); padding: 8px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">AI AUTOMATION</span>
+                            <h1 style="font-size: 2.5rem; margin: 24px 0; color: var(--dark); line-height: 1.2;">How n8n and AI Automation Transform Small Business Operations</h1>
+                            <div style="color: var(--gray-600); margin-bottom: 32px;">
+                                <span>January 15, 2024</span> • <span>8 min read</span> • <span>By NexusWealthAI Team</span>
+                            </div>
+                        </div>
 
-                    <p>Business intelligence isn't a luxury—it's a necessity for competitive solo entrepreneurs. Start with the basics, measure everything that matters, and gradually expand your capabilities as your business grows.</p>
+                        <div style="line-height: 1.8; font-size: 1.1rem;">
+                            <p>Small businesses today face unprecedented challenges: rising operational costs, increasing competition, and the constant pressure to do more with less. However, 2024 has marked a turning point where AI automation is no longer a luxury reserved for enterprise companies—it's becoming essential for survival and growth.</p>
 
-                    <p>The key is to begin now. Every day without proper BI is a day of flying blind in an increasingly data-driven business environment. Your competitors are already using these tools—the question is whether you'll join them or be left behind.</p>
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">The Current State of AI Automation for Small Businesses</h2>
+                            
+                            <p>Recent studies show that 73% of small businesses that implemented AI automation tools saw measurable improvements in efficiency within the first three months. The technology that once required massive budgets and technical teams is now accessible through user-friendly platforms and no-code solutions.</p>
+
+                            <div style="background: var(--gray-100); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0; font-style: italic; font-size: 1.2rem;">
+                                "AI automation isn't about replacing human creativity—it's about freeing your team from repetitive tasks so they can focus on what truly matters: growing your business."
+                            </div>
+
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">Top AI Automation Platforms Transforming Small Businesses</h2>
+
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">1. n8n: The Open-Source Powerhouse</h3>
+                            <p>n8n has emerged as a game-changer for small businesses seeking powerful automation without vendor lock-in. This open-source workflow automation tool allows businesses to connect over 350 different services and create complex workflows without writing code.</p>
+
+                            <p><strong>Key Benefits for Small Businesses:</strong></p>
+                            <ul style="margin-bottom: 24px; padding-left: 32px;">
+                                <li style="margin-bottom: 8px;">Complete data ownership and privacy control</li>
+                                <li style="margin-bottom: 8px;">No per-automation pricing—scale without worry</li>
+                                <li style="margin-bottom: 8px;">Extensive integration capabilities with popular business tools</li>
+                                <li style="margin-bottom: 8px;">Active community support and regular updates</li>
+                            </ul>
+
+                            <div style="background: var(--gradient-primary); color: var(--white); padding: 32px; border-radius: 16px; margin: 32px 0;">
+                                <h3 style="color: var(--white); margin-bottom: 16px;">Real Success Story</h3>
+                                <p style="margin: 0;">A digital marketing agency used n8n to automate their client onboarding process, reducing setup time from 4 hours to 15 minutes while eliminating errors and improving client satisfaction scores by 40%.</p>
+                            </div>
+
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">2. Zapier: The Accessibility Champion</h3>
+                            <p>While not exclusively AI-focused, Zapier's recent AI integrations make it incredibly powerful for small business automation. Its user-friendly interface allows non-technical team members to create sophisticated workflows.</p>
+
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">3. Microsoft Power Automate: Enterprise Features for Small Business Budgets</h3>
+                            <p>With AI Builder integration, Power Automate brings advanced capabilities like document processing, sentiment analysis, and predictive analytics within reach of small businesses already using Microsoft 365.</p>
+
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">AI Automation Use Cases That Drive Real ROI</h2>
+
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">Customer Service Automation</h3>
+                            <p>AI-powered chatbots and automated ticket routing can handle 80% of routine customer inquiries, allowing your team to focus on complex issues that require human touch. Businesses implementing these solutions report 45% reduction in response times and 35% improvement in customer satisfaction.</p>
+
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">Lead Qualification and Nurturing</h3>
+                            <p>AI automation can score leads, segment prospects, and trigger personalized communication sequences based on behavior patterns. This approach increases qualified lead conversion rates by an average of 67%.</p>
+
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">Financial Operations</h3>
+                            <p>From automated invoice processing to expense categorization and financial reporting, AI reduces accounting overhead by up to 60% while improving accuracy and compliance.</p>
+
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">Getting Started Today</h2>
+                            <p>The best time to implement AI automation was yesterday; the second-best time is today. Start by identifying your most time-consuming, repetitive processes and research which automation platform best fits your needs and technical comfort level.</p>
+
+                            <p>Remember, AI automation is not about perfection from day one—it's about continuous improvement and optimization. Each small step forward compounds into significant operational improvements over time.</p>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--dark); margin-bottom: 24px;">Ready to Transform Your Business Operations?</h3>
+                            <p style="color: var(--gray-600); margin-bottom: 32px;">Discover how NexusWealthAI can help you implement these AI automation strategies in your business.</p>
+                            <a href="#audit" onclick="closeArticle()" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 60px; font-weight: 600; text-decoration: none; background: var(--gradient-primary); color: var(--white); transition: all 0.4s ease;">
+                                <i class="fas fa-rocket"></i>
+                                Get Your Free Business Analysis
+                            </a>
+                        </div>
+                    </div>
                 `
             },
-            {
-                id: 'productivity-automation-small-teams-2024',
-                title: '10 Productivity Automation Workflows That Transform Small Teams',
-                category: 'productivity',
-                excerpt: 'Practical automation workflows using tools like n8n, Zapier, and Microsoft Power Automate that can increase team productivity by 200% while reducing operational overhead.',
-                date: '2024-01-08',
+            
+            'business-intelligence-guide': {
+                title: 'Business Intelligence Tools Every Solo Entrepreneur Needs',
+                category: 'Business Analytics',
+                date: 'January 12, 2024',
+                readTime: '10 min read',
+                content: `
+                    <div style="padding: 60px 40px;">
+                        <div style="text-align: center; margin-bottom: 40px;">
+                            <span style="background: var(--accent); color: var(--white); padding: 8px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">BUSINESS ANALYTICS</span>
+                            <h1 style="font-size: 2.5rem; margin: 24px 0; color: var(--dark); line-height: 1.2;">Business Intelligence Tools Every Solo Entrepreneur Needs</h1>
+                            <div style="color: var(--gray-600); margin-bottom: 32px;">
+                                <span>January 12, 2024</span> • <span>10 min read</span> • <span>By NexusWealthAI Team</span>
+                            </div>
+                        </div>
+
+                        <div style="line-height: 1.8; font-size: 1.1rem;">
+                            <p>Solo entrepreneurs face a unique challenge: they need enterprise-level insights to compete effectively, but they lack the resources and dedicated teams that larger companies have. Fortunately, 2024 has brought unprecedented access to powerful business intelligence tools that level the playing field.</p>
+
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">Why Business Intelligence Matters More Than Ever</h2>
+                            
+                            <p>In today's data-driven marketplace, intuition alone isn't enough. Solo entrepreneurs who leverage business intelligence tools report 23% higher revenue growth and make strategic decisions 5x faster than those relying solely on gut feelings.</p>
+
+                            <div style="background: var(--gray-100); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0; font-style: italic; font-size: 1.2rem;">
+                                "Data is the new oil, but for solo entrepreneurs, business intelligence is the refinery that turns raw data into actionable insights."
+                            </div>
+
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">Essential BI Categories for Solo Entrepreneurs</h2>
+
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">1. Customer Analytics and Behavior Tracking</h3>
+                            <p>Understanding your customers' journey, preferences, and pain points is crucial for sustainable growth. Modern BI tools can track customer interactions across multiple touchpoints, providing insights that were previously only available to enterprise companies.</p>
+
+                            <p><strong>Top Tools:</strong></p>
+                            <ul style="margin-bottom: 24px; padding-left: 32px;">
+                                <li style="margin-bottom: 8px;"><strong>Google Analytics 4:</strong> Free, comprehensive web analytics with advanced segmentation</li>
+                                <li style="margin-bottom: 8px;"><strong>Hotjar:</strong> Visual user behavior analytics with heatmaps and session recordings</li>
+                                <li style="margin-bottom: 8px;"><strong>Mixpanel:</strong> Event-based analytics for detailed user journey mapping</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">2. Financial Intelligence and Forecasting</h3>
+                            <p>Cash flow is the lifeblood of any solo entrepreneur's business. BI tools can help predict revenue trends, identify seasonal patterns, and optimize pricing strategies.</p>
+
+                            <div style="background: var(--gradient-primary); color: var(--white); padding: 32px; border-radius: 16px; margin: 32px 0;">
+                                <h3 style="color: var(--white); margin-bottom: 16px;">Success Metric</h3>
+                                <p style="margin: 0;">Solo entrepreneurs using financial BI tools report 34% better cash flow management and are 67% more likely to identify profit optimization opportunities early.</p>
+                            </div>
+
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">Taking Action: Your Next Steps</h2>
+                            <p>Business intelligence isn't a luxury—it's a necessity for competitive solo entrepreneurs. Start with the basics, measure everything that matters, and gradually expand your capabilities as your business grows.</p>
+
+                            <p>The key is to begin now. Every day without proper BI is a day of flying blind in an increasingly data-driven business environment.</p>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--dark); margin-bottom: 24px;">Ready to Implement Business Intelligence?</h3>
+                            <p style="color: var(--gray-600); margin-bottom: 32px;">Let NexusWealthAI help you choose and implement the right BI tools for your business.</p>
+                            <a href="#audit" onclick="closeArticle()" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 60px; font-weight: 600; text-decoration: none; background: var(--gradient-primary); color: var(--white); transition: all 0.4s ease;">
+                                <i class="fas fa-chart-line"></i>
+                                Get Your Free Analysis
+                            </a>
+                        </div>
+                    </div>
+                `
+            },
+
+            'productivity-workflows': {
+                title: '10 Automation Workflows That Transform Small Teams',
+                category: 'Productivity',
+                date: 'January 10, 2024',
                 readTime: '12 min read',
                 content: `
-                    <p>Small teams often punch above their weight, but they're also stretched thin. The difference between high-performing small teams and those struggling to keep up often comes down to one factor: intelligent automation of repetitive tasks.</p>
+                    <div style="padding: 60px 40px;">
+                        <div style="text-align: center; margin-bottom: 40px;">
+                            <span style="background: var(--secondary); color: var(--white); padding: 8px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">PRODUCTIVITY</span>
+                            <h1 style="font-size: 2.5rem; margin: 24px 0; color: var(--dark); line-height: 1.2;">10 Automation Workflows That Transform Small Teams</h1>
+                            <div style="color: var(--gray-600); margin-bottom: 32px;">
+                                <span>January 10, 2024</span> • <span>12 min read</span> • <span>By NexusWealthAI Team</span>
+                            </div>
+                        </div>
 
-                    <p>After analyzing productivity patterns across hundreds of small teams, we've identified 10 automation workflows that consistently deliver the highest return on investment. These aren't theoretical concepts—they're battle-tested solutions that real teams use to multiply their effectiveness.</p>
+                        <div style="line-height: 1.8; font-size: 1.1rem;">
+                            <p>Small teams often punch above their weight, but they're also stretched thin. The difference between high-performing small teams and those struggling to keep up often comes down to one factor: intelligent automation of repetitive tasks.</p>
 
-                    <h2>The Productivity Automation Framework</h2>
-                    
-                    <p>Before diving into specific workflows, it's crucial to understand the framework that makes automation successful:</p>
+                            <p>After analyzing productivity patterns across hundreds of small teams, we've identified 10 automation workflows that consistently deliver the highest return on investment.</p>
 
-                    <blockquote>
-                        "Automation should eliminate friction, not create complexity. The best automations are invisible to users but dramatically improve their experience." - Productivity Research Institute
-                    </blockquote>
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">The Productivity Automation Framework</h2>
+                            
+                            <div style="background: var(--gray-100); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0; font-style: italic; font-size: 1.2rem;">
+                                "Automation should eliminate friction, not create complexity. The best automations are invisible to users but dramatically improve their experience."
+                            </div>
 
-                    <h3>Core Principles:</h3>
-                    <ul>
-                        <li><strong>Start with pain points:</strong> Automate the tasks your team complains about most</li>
-                        <li><strong>Maintain human oversight:</strong> Automation should enhance, not replace, human judgment</li>
-                        <li><strong>Design for failure:</strong> Build in notifications and fallbacks for when things go wrong</li>
-                        <li><strong>Iterate continuously:</strong> Monitor, measure, and improve your automations over time</li>
-                    </ul>
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">Core Principles:</h3>
+                            <ul style="margin-bottom: 24px; padding-left: 32px;">
+                                <li style="margin-bottom: 8px;"><strong>Start with pain points:</strong> Automate the tasks your team complains about most</li>
+                                <li style="margin-bottom: 8px;"><strong>Maintain human oversight:</strong> Automation should enhance, not replace, human judgment</li>
+                                <li style="margin-bottom: 8px;"><strong>Design for failure:</strong> Build in notifications and fallbacks for when things go wrong</li>
+                                <li style="margin-bottom: 8px;"><strong>Iterate continuously:</strong> Monitor, measure, and improve your automations over time</li>
+                            </ul>
 
-                    <h2>Workflow #1: Intelligent Lead Qualification and Distribution</h2>
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">Top Workflow Examples</h2>
 
-                    <p><strong>Problem:</strong> Sales teams waste 67% of their time on unqualified leads, while hot prospects get delayed responses.</p>
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">1. Intelligent Lead Qualification</h3>
+                            <p><strong>Problem:</strong> Sales teams waste 67% of their time on unqualified leads, while hot prospects get delayed responses.</p>
 
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Form submission triggers n8n workflow</li>
-                        <li>Lead scoring algorithm analyzes company size, industry, and behavior</li>
-                        <li>High-value leads get immediate Slack notification + calendar booking link</li>
-                        <li>Medium-value leads enter nurture sequence</li>
-                        <li>Low-value leads get educational content series</li>
-                    </ul>
+                            <p><strong>Solution Architecture:</strong></p>
+                            <ul style="margin-bottom: 24px; padding-left: 32px;">
+                                <li style="margin-bottom: 8px;">Form submission triggers n8n workflow</li>
+                                <li style="margin-bottom: 8px;">Lead scoring algorithm analyzes company size, industry, and behavior</li>
+                                <li style="margin-bottom: 8px;">High-value leads get immediate Slack notification + calendar booking link</li>
+                                <li style="margin-bottom: 8px;">Medium-value leads enter nurture sequence</li>
+                                <li style="margin-bottom: 8px;">Low-value leads get educational content series</li>
+                            </ul>
 
-                    <div class="highlight-box">
-                        <h3>Real Results</h3>
-                        <p>A 12-person SaaS company implemented this workflow and saw 89% improvement in qualified lead response time and 34% increase in conversion rates within 60 days.</p>
+                            <div style="background: var(--gradient-primary); color: var(--white); padding: 32px; border-radius: 16px; margin: 32px 0;">
+                                <h3 style="color: var(--white); margin-bottom: 16px;">Real Results</h3>
+                                <p style="margin: 0;">A 12-person SaaS company implemented this workflow and saw 89% improvement in qualified lead response time and 34% increase in conversion rates within 60 days.</p>
+                            </div>
+
+                            <p><strong>Tools Required:</strong> n8n or Zapier, CRM (HubSpot/Pipedrive), Slack, Calendly</p>
+                            <p><strong>Monthly Time Savings:</strong> 25-30 hours per sales team member</p>
+
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">Taking Action</h2>
+                            <p>Productivity automation isn't about replacing your team—it's about amplifying their capabilities. Start with one workflow that addresses your biggest pain point, measure the results, and expand from there.</p>
+
+                            <p>The teams that embrace automation today will have an insurmountable advantage tomorrow. The question isn't whether you should automate, but how quickly you can start.</p>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--gray-200);">
+                            <h3 style="color: var(--dark); margin-bottom: 24px;">Ready to Automate Your Workflows?</h3>
+                            <p style="color: var(--gray-600); margin-bottom: 32px;">Discover which automation workflows will have the biggest impact on your team's productivity.</p>
+                            <a href="#audit" onclick="closeArticle()" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; border-radius: 60px; font-weight: 600; text-decoration: none; background: var(--gradient-primary); color: var(--white); transition: all 0.4s ease;">
+                                <i class="fas fa-rocket"></i>
+                                Get Your Free Workflow Analysis
+                            </a>
+                        </div>
                     </div>
-
-                    <p><strong>Tools Required:</strong> n8n or Zapier, CRM (HubSpot/Pipedrive), Slack, Calendly</p>
-                    <p><strong>Setup Time:</strong> 4-6 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 25-30 hours per sales team member</p>
-
-                    <h2>Workflow #2: Project Onboarding Automation</h2>
-
-                    <p><strong>Problem:</strong> New project setup is inconsistent, time-consuming, and prone to missed steps.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Project creation in management tool triggers automation</li>
-                        <li>Automatically creates folder structures in Google Drive/SharePoint</li>
-                        <li>Sets up communication channels in Slack/Teams</li>
-                        <li>Assigns team members based on project type and availability</li>
-                        <li>Creates initial task templates and deadlines</li>
-                        <li>Sends welcome email to client with project portal access</li>
-                    </ul>
-
-                    <p><strong>Advanced Features:</strong></p>
-                    <ul>
-                        <li>Resource conflict detection and automatic rescheduling suggestions</li>
-                        <li>Budget tracking setup with automated alerts</li>
-                        <li>Client communication templates personalized by industry</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> Monday.com/Asana, Google Workspace, Slack, n8n</p>
-                    <p><strong>Setup Time:</strong> 6-8 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 15-20 hours for project managers</p>
-
-                    <h2>Workflow #3: Smart Content Distribution</h2>
-
-                    <p><strong>Problem:</strong> Marketing teams manually post content across multiple platforms, leading to inconsistent messaging and timing.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Content approval in management system triggers distribution</li>
-                        <li>AI-powered platform-specific optimization (LinkedIn vs. Twitter vs. Facebook)</li>
-                        <li>Optimal timing based on audience analytics</li>
-                        <li>Cross-platform performance tracking</li>
-                        <li>Automatic A/B testing for post variations</li>
-                    </ul>
-
-                    <p><strong>Platform Customizations:</strong></p>
-                    <ul>
-                        <li><strong>LinkedIn:</strong> Professional tone, industry hashtags, thought leadership angle</li>
-                        <li><strong>Twitter:</strong> Conversational tone, trending hashtags, thread creation</li>
-                        <li><strong>Facebook:</strong> Community-focused messaging, visual emphasis</li>
-                        <li><strong>Instagram:</strong> Visual storytelling, Stories integration</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> Buffer/Hootsuite, GPT-4 API, Google Analytics, n8n</p>
-                    <p><strong>Setup Time:</strong> 8-10 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 20-25 hours for marketing teams</p>
-
-                    <h2>Workflow #4: Automated Customer Success Monitoring</h2>
-
-                    <p><strong>Problem:</strong> Customer health issues go unnoticed until it's too late, leading to churn.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Real-time monitoring of usage patterns, support tickets, and payment history</li>
-                        <li>Machine learning model identifies at-risk customers</li>
-                        <li>Automated outreach sequences based on risk level and customer segment</li>
-                        <li>Success manager notifications with recommended actions</li>
-                        <li>Positive usage milestones trigger celebration and upsell opportunities</li>
-                    </ul>
-
-                    <p><strong>Risk Factors Monitored:</strong></p>
-                    <ul>
-                        <li>Declining usage patterns over 30-day periods</li>
-                        <li>Multiple support tickets without resolution</li>
-                        <li>Payment delays or failed transactions</li>
-                        <li>Key stakeholder changes (detected via LinkedIn integration)</li>
-                        <li>Competitor mentions in communications</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> Customer success platform, n8n, email automation, Slack</p>
-                    <p><strong>Setup Time:</strong> 10-12 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 30-35 hours, plus significant churn reduction</p>
-
-                    <h2>Workflow #5: Invoice and Payment Processing</h2>
-
-                    <p><strong>Problem:</strong> Manual invoice processing creates delays, errors, and cash flow issues.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Project completion triggers automatic invoice generation</li>
-                        <li>Client notification with multiple payment options</li>
-                        <li>Automated payment reminders based on terms</li>
-                        <li>Late payment escalation sequences</li>
-                        <li>Revenue recognition and financial reporting updates</li>
-                    </ul>
-
-                    <p><strong>Smart Features:</strong></p>
-                    <ul>
-                        <li>Dynamic payment terms based on client payment history</li>
-                        <li>Currency conversion for international clients</li>
-                        <li>Tax calculation based on client location</li>
-                        <li>Automatic creation of recurring invoices for retainer clients</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> QuickBooks/FreshBooks, Stripe/PayPal, n8n, email platform</p>
-                    <p><strong>Setup Time:</strong> 5-7 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 12-15 hours for finance team</p>
-
-                    <h2>Workflow #6: Employee Onboarding Automation</h2>
-
-                    <p><strong>Problem:</strong> New hire onboarding is inconsistent and overwhelming for both HR and new employees.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Hiring decision triggers comprehensive onboarding sequence</li>
-                        <li>Automated account creation across all business systems</li>
-                        <li>Personalized welcome packages and equipment orders</li>
-                        <li>Progressive disclosure of information over first 90 days</li>
-                        <li>Automated check-ins and feedback collection</li>
-                    </ul>
-
-                    <p><strong>Onboarding Timeline:</strong></p>
-                    <ul>
-                        <li><strong>Day -7:</strong> Welcome email, handbook delivery, first-day logistics</li>
-                        <li><strong>Day 1:</strong> Office tour checklist, introduction scheduling, system access</li>
-                        <li><strong>Week 1:</strong> Role-specific training modules, mentor assignment</li>
-                        <li><strong>Month 1:</strong> Goal setting, performance expectations, team integration</li>
-                        <li><strong>Month 3:</strong> Comprehensive review, feedback collection, career planning</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> HRIS, Google Workspace/Microsoft 365, Slack, n8n</p>
-                    <p><strong>Setup Time:</strong> 8-10 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 20 hours per new hire for HR team</p>
-
-                    <h2>Workflow #7: Social Media Monitoring and Response</h2>
-
-                    <p><strong>Problem:</strong> Brand mentions and customer feedback across social platforms go unnoticed or get delayed responses.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Real-time monitoring of brand mentions across all major platforms</li>
-                        <li>Sentiment analysis and priority scoring</li>
-                        <li>Automatic routing to appropriate team members</li>
-                        <li>Template responses for common inquiries</li>
-                        <li>Escalation protocols for negative sentiment</li>
-                    </ul>
-
-                    <p><strong>Response Protocols:</strong></p>
-                    <ul>
-                        <li><strong>Positive mentions:</strong> Thank and share internally for team morale</li>
-                        <li><strong>Questions:</strong> Route to customer service with context</li>
-                        <li><strong>Complaints:</strong> Immediate response, escalate to management</li>
-                        <li><strong>Crises:</strong> Emergency protocol, all-hands notification</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> Mention.com/Brand24, sentiment analysis API, Slack, n8n</p>
-                    <p><strong>Setup Time:</strong> 4-6 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 15-20 hours for social media team</p>
-
-                    <h2>Workflow #8: Automated Competitive Intelligence</h2>
-
-                    <p><strong>Problem:</strong> Teams lack systematic tracking of competitive developments and market changes.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Web scraping of competitor websites for price and feature changes</li>
-                        <li>News and blog monitoring for competitive mentions</li>
-                        <li>Social media tracking for competitive campaigns</li>
-                        <li>Weekly competitive intelligence reports</li>
-                        <li>Alert system for significant competitive moves</li>
-                    </ul>
-
-                    <div class="highlight-box">
-                        <h3>Competitive Advantage</h3>
-                        <p>A marketing agency used this workflow to identify a competitor's pricing change 3 days before their official announcement, allowing them to adjust their strategy and capture 23% more leads during the transition period.</p>
-                    </div>
-
-                    <p><strong>Intelligence Categories:</strong></p>
-                    <ul>
-                        <li><strong>Pricing:</strong> Changes in competitor pricing structures</li>
-                        <li><strong>Features:</strong> New product announcements and updates</li>
-                        <li><strong>Marketing:</strong> Campaign launches and messaging changes</li>
-                        <li><strong>Personnel:</strong> Key hiring and executive changes</li>
-                        <li><strong>Partnerships:</strong> New integrations and strategic alliances</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> Web scraping tools, news APIs, social monitoring, n8n</p>
-                    <p><strong>Setup Time:</strong> 6-8 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 10-15 hours for strategy team</p>
-
-                    <h2>Workflow #9: Event and Webinar Automation</h2>
-
-                    <p><strong>Problem:</strong> Event management involves countless repetitive tasks that are prone to human error.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Event creation triggers comprehensive automation sequence</li>
-                        <li>Registration page creation and optimization</li>
-                        <li>Multi-channel promotion across email, social, and partner networks</li>
-                        <li>Automated reminder sequences for registrants</li>
-                        <li>Post-event follow-up and content distribution</li>
-                    </ul>
-
-                    <p><strong>Event Lifecycle Automation:</strong></p>
-                    <ul>
-                        <li><strong>Pre-event (4 weeks):</strong> Landing page creation, speaker coordination, promotion launch</li>
-                        <li><strong>Pre-event (2 weeks):</strong> Registration reminders, logistics confirmation, content preparation</li>
-                        <li><strong>Pre-event (24 hours):</strong> Final reminders, technical checks, attendance predictions</li>
-                        <li><strong>During event:</strong> Real-time engagement tracking, Q&A management, technical support</li>
-                        <li><strong>Post-event:</strong> Recording distribution, follow-up surveys, lead scoring</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> Zoom/Teams, email platform, CRM, landing page builder, n8n</p>
-                    <p><strong>Setup Time:</strong> 10-12 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 25-30 hours for event team</p>
-
-                    <h2>Workflow #10: Knowledge Management and Documentation</h2>
-
-                    <p><strong>Problem:</strong> Institutional knowledge gets trapped in individual team members, creating bottlenecks and risks.</p>
-
-                    <p><strong>Solution Architecture:</strong></p>
-                    <ul>
-                        <li>Automatic extraction of insights from team communications</li>
-                        <li>AI-powered documentation generation from project completions</li>
-                        <li>Smart tagging and categorization of knowledge assets</li>
-                        <li>Proactive knowledge sharing recommendations</li>
-                        <li>Automated training material updates</li>
-                    </ul>
-
-                    <p><strong>Knowledge Capture Methods:</strong></p>
-                    <ul>
-                        <li><strong>Meeting transcriptions:</strong> Automatic extraction of decisions and action items</li>
-                        <li><strong>Project retrospectives:</strong> Lessons learned documentation</li>
-                        <li><strong>Support interactions:</strong> FAQ and troubleshooting guide updates</li>
-                        <li><strong>Code commits:</strong> Technical documentation maintenance</li>
-                        <li><strong>Training sessions:</strong> Knowledge base expansion</li>
-                    </ul>
-
-                    <p><strong>Tools Required:</strong> Notion/Confluence, transcription services, AI summarization, n8n</p>
-                    <p><strong>Setup Time:</strong> 8-10 hours</p>
-                    <p><strong>Monthly Time Savings:</strong> 20-25 hours across entire team</p>
-
-                    <h2>Implementation Strategy: Your 90-Day Automation Roadmap</h2>
-
-                    <h3>Days 1-30: Foundation Phase</h3>
-                    <ul>
-                        <li>Audit current processes and identify top 3 pain points</li>
-                        <li>Select primary automation platform (n8n for flexibility, Zapier for ease of use)</li>
-                        <li>Implement 1-2 high-impact, low-complexity workflows</li>
-                        <li>Train team on new processes and gather feedback</li>
-                    </ul>
-
-                    <h3>Days 31-60: Expansion Phase</h3>
-                    <ul>
-                        <li>Add 2-3 additional workflows based on initial success</li>
-                        <li>Connect workflows for compound productivity gains</li>
-                        <li>Establish monitoring and maintenance procedures</li>
-                        <li>Create documentation and troubleshooting guides</li>
-                    </ul>
-
-                    <h3>Days 61-90: Optimization Phase</h3>
-                    <ul>
-                        <li>Analyze performance data and optimize existing workflows</li>
-                        <li>Implement advanced features and AI integration</li>
-                        <li>Plan next phase of automation expansion</li>
-                        <li>Calculate ROI and plan budget for scaling</li>
-                    </ul>
-
-                    <h2>Measuring Automation Success</h2>
-
-                    <p>Track these key metrics to quantify the impact of your productivity automations:</p>
-
-                    <h3>Primary Metrics:</h3>
-                    <ul>
-                        <li><strong>Time Savings:</strong> Hours reclaimed per team member per week</li>
-                        <li><strong>Error Reduction:</strong> Decrease in manual process mistakes</li>
-                        <li><strong>Response Times:</strong> Improved customer and internal response speeds</li>
-                        <li><strong>Throughput:</strong> Increased capacity to handle more work</li>
-                    </ul>
-
-                    <h3>Secondary Metrics:</h3>
-                    <ul>
-                        <li><strong>Employee Satisfaction:</strong> Reduced burnout from repetitive tasks</li>
-                        <li><strong>Client Satisfaction:</strong> Improved service consistency and speed</li>
-                        <li><strong>Revenue Impact:</strong> Increased capacity leading to revenue growth</li>
-                        <li><strong>Competitive Advantage:</strong> Faster adaptation to market changes</li>
-                    </ul>
-
-                    <h2>Common Automation Pitfalls to Avoid</h2>
-
-                    <h3>1. Automating Broken Processes</h3>
-                    <p>Fix the process first, then automate it. Automating a bad process just makes problems happen faster.</p>
-
-                    <h3>2. Over-Engineering Solutions</h3>
-                    <p>Start simple and add complexity gradually. The best automation is the one your team actually uses.</p>
-
-                    <h3>3. Ignoring Change Management</h3>
-                    <p>People resist change, especially when it affects their daily work. Involve team members in the design and implementation process.</p>
-
-                    <h3>4. Lack of Monitoring</h3>
-                    <p>Automations can fail silently. Build in monitoring, alerts, and regular review processes.</p>
-
-                    <h2>The Future of Team Productivity Automation</h2>
-
-                    <p>Looking ahead, productivity automation will become even more intelligent and proactive. Trends to watch include:</p>
-                    <ul>
-                        <li>Natural language automation setup (describe what you want, AI builds it)</li>
-                        <li>Predictive task automation based on patterns</li>
-                        <li>Cross-platform AI assistants that understand business context</li>
-                        <li>Real-time process optimization based on performance data</li>
-                    </ul>
-
-                    <h2>Taking Action: Your Next Steps</h2>
-
-                    <p>Productivity automation isn't about replacing your team—it's about amplifying their capabilities. Start with one workflow that addresses your biggest pain point, measure the results, and expand from there.</p>
-
-                    <p>The teams that embrace automation today will have an insurmountable advantage tomorrow. The question isn't whether you should automate, but how quickly you can start.</p>
-
-                    <p>Remember: every repetitive task your team performs manually is an opportunity for automation. The cumulative effect of these improvements will transform your team's capacity and your business's potential.</p>
                 `
             },
-            {
-                id: 'revenue-optimization-ai-analytics-2024',
-                title: 'Revenue Optimization Through AI-Driven Analytics: A Complete Guide',
-                category: 'revenue-optimization',
-                excerpt: 'Learn how AI analytics can identify hidden revenue opportunities, optimize pricing strategies, and improve customer lifetime value through data-driven insights and automated optimization.',
-                date: '2024-01-05',
+
+            'revenue-optimization': {
+                title: 'Revenue Optimization Through AI-Driven Analytics',
+                category: 'Revenue Growth',
+                date: 'January 8, 2024',
                 readTime: '14 min read',
                 content: `
-                    <p>Revenue optimization has evolved from simple price adjustments to sophisticated AI-driven strategies that analyze customer behavior, market dynamics, and operational efficiency in real-time. Companies leveraging AI analytics for revenue optimization report average increases of 15-25% in profitable revenue within the first year of implementation.</p>
+                    <div style="padding: 60px 40px;">
+                        <div style="text-align: center; margin-bottom: 40px;">
+                            <span style="background: #6c5ce7; color: var(--white); padding: 8px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">REVENUE GROWTH</span>
+                            <h1 style="font-size: 2.5rem; margin: 24px 0; color: var(--dark); line-height: 1.2;">Revenue Optimization Through AI-Driven Analytics</h1>
+                            <div style="color: var(--gray-600); margin-bottom: 32px;">
+                                <span>January 8, 2024</span> • <span>14 min read</span> • <span>By NexusWealthAI Team</span>
+                            </div>
+                        </div>
 
-                    <p>This comprehensive guide explores how businesses can harness AI analytics to unlock hidden revenue potential and build sustainable growth engines.</p>
+                        <div style="line-height: 1.8; font-size: 1.1rem;">
+                            <p>Revenue optimization has evolved from simple price adjustments to sophisticated AI-driven strategies that analyze customer behavior, market dynamics, and operational efficiency in real-time. Companies leveraging AI analytics for revenue optimization report average increases of 15-25% in profitable revenue within the first year of implementation.</p>
 
-                    <h2>The AI Revenue Optimization Framework</h2>
-                    
-                    <p>Traditional revenue optimization relied on historical data and intuition. AI-driven approaches use predictive analytics, machine learning, and real-time data processing to make dynamic optimizations that adapt to changing market conditions.</p>
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">The AI Revenue Optimization Framework</h2>
+                            
+                            <p>Traditional revenue optimization relied on historical data and intuition. AI-driven approaches use predictive analytics, machine learning, and real-time data processing to make dynamic optimizations that adapt to changing market conditions.</p>
 
-                    <blockquote>
-                        "AI doesn't just tell you what happened—it predicts what will happen and automatically adjusts to maximize revenue potential." - Revenue Management Institute
-                    </blockquote>
+                            <div style="background: var(--gray-100); border-left: 4px solid var(--primary); padding: 24px; margin: 32px 0; font-style: italic; font-size: 1.2rem;">
+                                "AI doesn't just tell you what happened—it predicts what will happen and automatically adjusts to maximize revenue potential."
+                            </div>
 
-                    <h3>Core Components of AI Revenue Optimization:</h3>
-                    <ul>
-                        <li><strong>Predictive Customer Analytics:</strong> AI models that forecast customer behavior, lifetime value, and churn probability</li>
-                        <li><strong>Dynamic Pricing Optimization:</strong> Real-time price adjustments based on demand, competition, and customer segments</li>
-                        <li><strong>Channel Performance Analytics:</strong> AI-powered attribution modeling and channel optimization</li>
-                        <li><strong>Product Mix Optimization:</strong> Data-driven recommendations for product development and portfolio management</li>
-                        <li><strong>Customer Journey Optimization:</strong> AI-driven improvements to conversion funnels and customer experience</li>
-                    </ul>
+                            <h3 style="color: var(--primary); margin: 36px 0 18px; font-size: 1.5rem;">Core Components:</h3>
+                            <ul style="margin-bottom: 24px; padding-left: 32px;">
+                                <li style="margin-bottom: 8px;"><strong>Predictive Customer Analytics:</strong> AI models that forecast customer behavior, lifetime value, and churn probability</li>
+                                <li style="margin-bottom: 8px;"><strong>Dynamic Pricing Optimization:</strong> Real-time price adjustments based on demand, competition, and customer segments</li>
+                                <li style="margin-bottom: 8px;"><strong>Channel Performance Analytics:</strong> AI-powered attribution modeling and channel optimization</li>
+                                <li style="margin-bottom: 8px;"><strong>Product Mix Optimization:</strong> Data-driven recommendations for product development and portfolio management</li>
+                                <li style="margin-bottom: 8px;"><strong>Customer Journey Optimization:</strong> AI-driven improvements to conversion funnels and customer experience</li>
+                            </ul>
 
-                    <h2>AI-Powered Customer Lifetime Value Optimization</h2>
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">AI-Powered Customer Lifetime Value Optimization</h2>
 
-                    <p>Customer Lifetime Value (CLV) is the most critical revenue metric, yet most businesses calculate it incorrectly or fail to act on insights. AI transforms CLV from a backward-looking metric to a forward-looking optimization engine.</p>
+                            <p>Customer Lifetime Value (CLV) is the most critical revenue metric, yet most businesses calculate it incorrectly or fail to act on insights. AI transforms CLV from a backward-looking metric to a forward-looking optimization engine.</p>
 
-                    <h3>Advanced CLV Modeling with AI</h3>
-                    <p>Traditional CLV calculations use simple formulas based on historical averages. AI-powered CLV models consider hundreds of variables:</p>
+                            <div style="background: var(--gradient-primary); color: var(--white); padding: 32px; border-radius: 16px; margin: 32px 0;">
+                                <h3 style="color: var(--white); margin-bottom: 16px;">Case Study: SaaS CLV Optimization</h3>
+                                <p style="margin: 0;">A B2B SaaS company implemented AI-powered CLV modeling and discovered that customers who used a specific feature combination within their first 30 days had 340% higher lifetime value. By optimizing their onboarding to promote these features, they increased average CLV by $18,000 per customer.</p>
+                            </div>
 
-                    <ul>
-                        <li><strong>Behavioral Patterns:</strong> Product usage frequency, feature adoption, support interactions</li>
-                        <li><strong>Engagement Metrics:</strong> Email opens, website visits, social media interactions</li>
-                        <li><strong>Transactional Data:</strong> Purchase frequency, basket size, seasonal patterns</li>
-                        <li><strong>Demographic Factors:</strong> Industry, company size, geographic location</li>
-                        <li><strong>External Factors:</strong> Market conditions, competitive actions, economic indicators</li>
-                    </ul>
+                            <h2 style="color: var(--dark); margin: 48px 0 24px; font-size: 2rem;">Getting Started: Your Action Plan</h2>
 
-                    <div class="highlight-box">
-                        <h3>Case Study: SaaS CLV Optimization</h3>
-                        <p>A B2B SaaS company implemented AI-powered CLV modeling and discovered that customers who used a specific feature combination within their first 30 days had 340% higher lifetime value. By optimizing their onboarding to promote these features, they increased average CLV by $18,000 per customer.</p>
-                    </div>
+                            <p>AI-driven revenue optimization isn't a destination—it's a journey of continuous improvement. Start with these immediate actions:</p>
 
-                    <h3>CLV-Driven Customer Acquisition</h3>
-                    <p>AI enables precise targeting based on predicted CLV rather than just conversion probability:</p>
-                    <ul>
-                        <li><strong>Lookalike Modeling:</strong> Find prospects similar to high-CLV customers</li>
-                        <li><strong>Channel Optimization:</strong> Allocate budget to channels that attract high-value customers</li>
-                        <li><strong>Creative Optimization:</strong> Test messaging that resonates with high-CLV segments</li>
-                        <li><strong>Bidding Strategies:</strong> Adjust acquisition costs based on predicted customer value</li>
-                    </ul>
+                            <ol style="margin-bottom: 24px; padding-left: 32px;">
+                                <li style="margin-bottom: 8px;"><strong>Assess your current state:</strong> Audit your data, processes, and revenue optimization maturity</li>
+                                <li style="margin-bottom: 8px;"><strong>Identify quick wins:</strong> Look for high-impact, low-complexity AI applications</li>
+                                <li style="margin-bottom: 8px;"><strong>Build your foundation:</strong> Invest in data infrastructure and team capabilities</li>
+                                <li style="margin-bottom: 8px;"><strong>Start small and scale:</strong> Launch pilot programs and expand based on results</li>
+                                <li style="margin-bottom: 8px;"><strong>Measure and iterate:</strong> Continuously monitor performance and improve your approach</li>
+                            </ol>
 
-                    <h2>Dynamic Pricing Optimization</h2>
+                            <p>The companies that master AI-driven revenue optimization today will dominate their markets tomorrow. The question isn't whether you should implement these strategies—it's how quickly you can start and how effectively you can execute.</p>
+                        </div>
 
-                    <p>AI-powered dynamic pricing goes beyond simple competitive matching to consider demand elasticity, customer segmentation, inventory levels, and market conditions in real-time.</p>
-
-                    <h3>Multi-Factor Pricing Models</h3>
-                    <p>Modern AI pricing algorithms analyze multiple data streams simultaneously:</p>
-
-                    <h4>Demand-Side Factors:</h4>
-                    <ul>
-                        <li>Historical demand patterns and seasonality</li>
-                        <li>Customer segment price sensitivity</li>
-                        <li>Geographic and demographic variations</li>
-                        <li>Competitive pricing dynamics</li>
-                    </ul>
-
-                    <h4>Supply-Side Factors:</h4>
-                    <ul>
-                        <li>Inventory levels and carrying costs</li>
-                        <li>Production capacity and constraints</li>
-                        <li>Supplier cost fluctuations</li>
-                        <li>Operational efficiency metrics</li>
-                    </ul>
-
-                    <h4>Strategic Factors:</h4>
-                    <ul>
-                        <li>Market positioning objectives</li>
-                        <li>Customer acquisition vs. retention goals</li>
-                        <li>Profit margin targets by segment</li>
-                        <li>Competitive response predictions</li>
-                    </ul>
-
-                    <h3>Implementation Strategy for Dynamic Pricing</h3>
-
-                    <h4>Phase 1: Data Foundation (Weeks 1-4)</h4>
-                    <ul>
-                        <li>Integrate all pricing-relevant data sources</li>
-                        <li>Clean and normalize historical pricing and sales data</li>
-                        <li>Set up real-time data collection systems</li>
-                        <li>Establish baseline performance metrics</li>
-                    </ul>
-
-                    <h4>Phase 2: Model Development (Weeks 5-8)</h4>
-                    <ul>
-                        <li>Develop price elasticity models by customer segment</li>
-                        <li>Build competitive response prediction models</li>
-                        <li>Create inventory optimization algorithms</li>
-                        <li>Test models with historical data</li>
-                    </ul>
-
-                    <h4>Phase 3: Pilot Implementation (Weeks 9-12)</h4>
-                    <ul>
-                        <li>Launch with limited product/market segments</li>
-                        <li>Monitor performance against control groups</li>
-                        <li>Refine algorithms based on real-world results</li>
-                        <li>Train teams on new pricing processes</li>
-                    </ul>
-
-                    <h4>Phase 4: Full Deployment (Weeks 13-16)</h4>
-                    <ul>
-                        <li>Roll out across all relevant products/services</li>
-                        <li>Implement automated monitoring and alerts</li>
-                        <li>Establish governance and override protocols</li>
-                        <li>Create performance dashboards and reports</li>
-                    </ul>
-
-                    <h2>AI-Driven Sales and Marketing Optimization</h2>
-
-                    <p>AI transforms sales and marketing from art to science by providing precise insights into what works, for whom, and under what conditions.</p>
-
-                    <h3>Predictive Lead Scoring</h3>
-                    <p>Traditional lead scoring relies on simple demographic and firmographic data. AI-powered lead scoring analyzes behavioral patterns, engagement sequences, and external signals to predict conversion probability and value.</p>
-
-                    <p><strong>Advanced Scoring Factors:</strong></p>
-                    <ul>
-                        <li><strong>Digital Body Language:</strong> Website behavior, content consumption patterns, email engagement</li>
-                        <li><strong>Intent Signals:</strong> Search behavior, content downloads, competitor research activity</li>
-                        <li><strong>Social Signals:</strong> LinkedIn activity, industry discussions, company news</li>
-                        <li><strong>Technographic Data:</strong> Technology stack, software usage, implementation readiness</li>
-                        <li><strong>Timing Indicators:</strong> Budget cycles, contract renewals, growth events</li>
-                    </ul>
-
-                    <h3>Attribution and Channel Optimization</h3>
-                    <p>AI-powered attribution models move beyond first-touch and last-touch to understand the complete customer journey and optimize marketing spend accordingly.</p>
-
-                    <p><strong>Advanced Attribution Capabilities:</strong></p>
-                    <ul>
-                        <li><strong>Multi-Touch Attribution:</strong> Credit assignment across all touchpoints in the customer journey</li>
-                        <li><strong>Cross-Device Tracking:</strong> Unified view of customer interactions across devices</li>
-                        <li><strong>Offline Integration:</strong> Connection between digital marketing and offline conversions</li>
-                        <li><strong>Time-Decay Modeling:</strong> Weighted attribution based on proximity to conversion</li>
-                    </ul>
-
-                    <div class="highlight-box">
-                        <h3>Attribution Impact</h3>
-                        <p>An e-commerce company discovered through AI attribution analysis that their display advertising—previously considered ineffective—was actually driving 34% more conversions than previously measured. Reallocating budget based on true attribution improved ROAS by 127%.</p>
-                    </div>
-
-                    <h2>Product and Service Portfolio Optimization</h2>
-
-                    <p>AI analytics can identify which products or services to develop, promote, or discontinue based on comprehensive market analysis and customer behavior patterns.</p>
-
-                    <h3>Product Performance Analytics</h3>
-                    <p>AI-driven product analytics go beyond basic sales metrics to understand the complete ecosystem of product performance:</p>
-
-                    <ul>
-                        <li><strong>Cross-Product Impact:</strong> How individual products affect sales of others</li>
-                        <li><strong<!DOCTYPE html>
+                        <div style="text-align    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content fade-in-up">
+                <h2>Ready to Discover Your Hidden Revenue?</h2>
+                <p style="font-size: 1.25rem; margin<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">NexusWealthAI - Transform Your Business Intelligence</title>
-    <meta name="description" id="page-description" content="AI-powered business intelligence reveals profit leaks and revenue opportunities. Discover hidden potential worth $50K+ with advanced analytics and automation tools.">
-    <meta name="keywords" id="page-keywords" content="AI business intelligence, revenue optimization, small business automation, profit analysis, n8n automation, business analytics, AI tools for entrepreneurs">
-    <link rel="canonical" id="canonical-url" href="https://nexuswealthai.com/">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" id="og-title" content="NexusWealthAI - AI-Powered Business Intelligence">
-    <meta property="og:description" id="og-description" content="Discover hidden revenue opportunities worth $50K+ with advanced AI-powered business analytics and automation solutions.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" id="og-url" content="https://nexuswealthai.com/">
-    
+    <title>NexusWealthAI - Transform Your Business Intelligence</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VPZ2XW0SW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5VPZ2XW0SW');
-    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VPZ2XW0SW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5VPZ2XW0SW');
+</script>
     
     <style>
         :root {
@@ -684,35 +507,6 @@
             transform: translateY(-2px);
         }
         
-        /* Navigation Enhancements */
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
-        
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-menu a:hover {
-            color: var(--primary);
-        }
-        
-        .nav-menu a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary);
-        }
-        
         /* Advanced Animations */
         .floating-element {
             position: absolute;
@@ -757,11 +551,36 @@
         .particle:nth-child(5) { width: 4px; height: 4px; top: 80%; right: 10%; animation-delay: 12s; }
         
         @keyframes float-particle {
-            0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.3; }
-            25% { transform: translateY(-20px) translateX(10px) rotate(90deg); opacity: 0.5; }
-            50% { transform: translateY(0) translateX(20px) rotate(180deg); opacity: 0.3; }
-            75% { transform: translateY(20px) translateX(10px) rotate(270deg); opacity: 0.5; }
-            100% { transform: translateY(0) translateX(0) rotate(360deg); opacity: 0.3; }
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px) rotate(90deg);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(0) translateX(20px) rotate(180deg);
+                opacity: 0.3;
+            }
+            75% {
+                transform: translateY(20px) translateX(10px) rotate(270deg);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(0) translateX(0) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+        
+        /* Glassmorphism Effects */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
         }
         
         /* Header */
@@ -832,236 +651,7 @@
             font-size: 24px;
         }
         
-        /* Page Display Logic */
-        .page {
-            display: none;
-        }
-        
-        .page.active {
-            display: block;
-        }
-        
-        /* Blog Specific Styles */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
-            margin-top: 60px;
-        }
-        
-        .blog-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: all 0.4s ease;
-            border: 1px solid var(--gray-200);
-            cursor: pointer;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .blog-image {
-            width: 100%;
-            height: 200px;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .blog-image i {
-            font-size: 48px;
-            color: var(--white);
-            opacity: 0.8;
-        }
-        
-        .blog-content {
-            padding: 24px;
-        }
-        
-        .blog-category {
-            display: inline-block;
-            background: var(--secondary);
-            color: var(--white);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-        
-        .blog-title {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-            color: var(--dark);
-        }
-        
-        .blog-excerpt {
-            color: var(--gray-600);
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 16px;
-        }
-        
-        .blog-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.875rem;
-            color: var(--gray-500);
-        }
-        
-        .read-time {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        
-        /* Blog Categories */
-        .category-filters {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-        
-        .category-filter {
-            padding: 8px 20px;
-            border: 2px solid var(--gray-200);
-            border-radius: 25px;
-            background: var(--white);
-            color: var(--gray-600);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .category-filter:hover,
-        .category-filter.active {
-            border-color: var(--primary);
-            background: var(--primary);
-            color: var(--white);
-        }
-        
-        /* Article Page Styles */
-        .article-header {
-            text-align: center;
-            padding: 140px 0 60px;
-            background: var(--gray-100);
-        }
-        
-        .article-meta {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 24px;
-            font-size: 0.9rem;
-            color: var(--gray-600);
-        }
-        
-        .article-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 24px;
-            line-height: 1.8;
-        }
-        
-        .article-content h2 {
-            margin-top: 48px;
-            margin-bottom: 24px;
-            font-size: 2rem;
-            color: var(--dark);
-        }
-        
-        .article-content h3 {
-            margin-top: 36px;
-            margin-bottom: 18px;
-            font-size: 1.5rem;
-            color: var(--dark);
-        }
-        
-        .article-content p {
-            margin-bottom: 24px;
-            font-size: 1.1rem;
-        }
-        
-        .article-content ul, .article-content ol {
-            margin-bottom: 24px;
-            padding-left: 32px;
-        }
-        
-        .article-content li {
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-        
-        .article-content blockquote {
-            background: var(--gray-100);
-            border-left: 4px solid var(--primary);
-            padding: 24px;
-            margin: 32px 0;
-            font-style: italic;
-            font-size: 1.2rem;
-        }
-        
-        .article-content .highlight-box {
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 32px;
-            border-radius: 16px;
-            margin: 32px 0;
-        }
-        
-        /* Contact Page Styles */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .contact-info {
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 60px 40px;
-            border-radius: 24px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        
-        .contact-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .contact-form {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 60px;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid var(--gray-200);
-        }
-        
-        /* All other existing styles from the original file... */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -1397,8 +987,7 @@
         }
         
         .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group select {
             width: 100%;
             padding: 16px 20px;
             border: 2px solid var(--gray-200);
@@ -1409,14 +998,8 @@
             font-family: 'Inter', sans-serif;
         }
         
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        
         .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group select:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
@@ -1470,6 +1053,112 @@
         .trust-icon i {
             font-size: 36px;
             color: var(--white);
+        }
+        
+        /* Blog Section Styles */
+        .blog-section {
+            background: var(--white);
+            position: relative;
+        }
+        
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 60px 0 40px;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 12px 24px;
+            border: 2px solid var(--gray-200);
+            background: var(--white);
+            color: var(--gray-600);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            border-color: var(--primary) !important;
+            background: var(--primary) !important;
+            color: var(--white) !important;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s ease;
+            border: 1px solid var(--gray-200);
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .blog-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        .blog-image i {
+            font-size: 48px;
+            color: var(--white);
+            opacity: 0.9;
+            z-index: 2;
+            position: relative;
+        }
+        
+        /* Article Modal */
+        #article-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            overflow-y: auto;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        
+        #article-modal > div {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--white);
+            border-radius: 20px;
+            position: relative;
         }
         
         /* CTA Section */
@@ -1537,134 +1226,10 @@
             100% { transform: scale(1); }
         }
         
-        /* Loading Animation */
-        .loading-spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            border-top-color: var(--white);
-            animation: spin 1s ease-in-out infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Custom Checkbox Styling */
-        .checkbox-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            margin: 20px 0;
-        }
-        
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .checkbox-item:hover {
-            background: var(--gray-100);
-        }
-        
-        .checkbox-item input[type="checkbox"] {
-            margin-right: 8px;
-            transform: scale(1.2);
-        }
-        
-        /* Section Header Styling */
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-header h2 {
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
-            margin-bottom: 24px;
-        }
-        
-        .section-header p {
-            font-size: 1.25rem;
-            color: var(--gray-600);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Advanced Animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        
-        /* Mobile Navigation */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 8px;
-        }
-        
-        .mobile-menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: var(--dark);
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
-        
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--white);
-            box-shadow: var(--shadow-lg);
-            border-top: 1px solid var(--gray-200);
-        }
-        
-        .mobile-menu.active {
-            display: block;
-        }
-        
-        .mobile-menu a {
-            display: block;
-            padding: 16px 24px;
-            border-bottom: 1px solid var(--gray-200);
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-        }
-        
-        .mobile-menu a:hover {
-            background: var(--gray-100);
-            color: var(--primary);
-        }
-        
         /* Responsive Design */
         @media (max-width: 1024px) {
             .hero-grid,
-            .solution-grid,
-            .contact-grid {
+            .solution-grid {
                 grid-template-columns: 1fr;
                 gap: 60px;
                 text-align: center;
@@ -1672,14 +1237,6 @@
             
             .hero-stats {
                 grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .nav-menu {
-                display: none;
-            }
-            
-            .mobile-menu-toggle {
-                display: flex;
             }
         }
         
@@ -1696,8 +1253,7 @@
                 font-size: 2.5rem;
             }
             
-            .audit-form,
-            .contact-form {
+            .audit-form {
                 padding: 40px 20px;
             }
             
@@ -1718,14 +1274,52 @@
                 grid-template-columns: 1fr;
             }
             
-            .category-filters {
+            .blog-categories {
                 justify-content: flex-start;
                 overflow-x: auto;
                 padding-bottom: 8px;
             }
             
-            .category-filter {
+            .category-btn {
                 white-space: nowrap;
                 flex-shrink: 0;
             }
+            
+            #article-modal > div {
+                margin: 20px;
+                border-radius: 16px;
+            }
+        }
+        
+        /* Advanced Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        
+        /* Loading Animation */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: var(--white);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
