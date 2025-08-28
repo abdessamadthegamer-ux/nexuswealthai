@@ -25,9 +25,10 @@
       color: #222;
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
     }
 
-    /* Header with professional premium theme */
+    /* Header */
     header {
       background: linear-gradient(135deg, #2c3e50, #3498db);
       color: #ecf0f1;
@@ -37,6 +38,7 @@
       letter-spacing: 0.08em;
       box-shadow: 0 8px 25px rgba(0,0,0,0.2);
       position: relative;
+      z-index: 1000;
     }
     header h1 {
       font-size: 3.6rem;
@@ -52,66 +54,94 @@
       color: #abd6f9;
     }
 
-    /* Nav bar */
+    /* Navigation bar */
     nav {
-      background: #fff;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-      position: sticky;
+      position: fixed;
       top: 0;
+      inset-inline: 0;
+      height: 60px;
+      background: rgba(255 255 255 / 0.95);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
       display: flex;
       justify-content: center;
-      z-index: 1000;
+      align-items: center;
+      gap: 24px;
+      padding: 0 2rem;
+      backdrop-filter: saturate(180%) blur(10px);
+      z-index: 1100;
     }
     nav button {
       all: unset;
       cursor: pointer;
       color: #34495e;
       font-weight: 600;
-      padding: 1.2rem 1.8rem;
-      border-bottom: 4px solid transparent;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-family: 'Raleway', sans-serif;
-      letter-spacing: 0.04em;
-      transition: all 0.3s ease;
-      flex-shrink: 0;
+      letter-spacing: 0.03em;
+      position: relative;
+      padding: 0.5rem 0.8rem;
+      transition: color 0.3s ease;
     }
-    nav button:hover, nav button.active {
+    nav button::after {
+      content: '';
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      bottom: 0;
+      height: 3px;
+      background-color: transparent;
+      border-radius: 2px;
+      transition: background-color 0.3s ease;
+    }
+    nav button:hover,
+    nav button:focus {
       color: #2980b9;
-      border-bottom-color: #2980b9;
+      outline: none;
+    }
+    nav button.active {
+      color: #2980b9;
       font-weight: 700;
+    }
+    nav button.active::after {
+      background-color: #2980b9;
     }
 
     /* Main container */
     main {
       max-width: 960px;
       background: #fff;
-      margin: 3rem auto 5rem;
-      padding: 3rem 3.75rem;
+      margin: 130px auto 60px;
+      padding: 3rem 3rem 3rem;
       border-radius: 16px;
       box-shadow: 0 12px 35px rgb(0 0 0 / 0.1);
-      scroll-margin-top: 80px;
     }
 
     /* Section styles */
     section {
-      display: none;
       opacity: 0;
-      transition: opacity 0.4s ease;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+      margin-bottom: 60px;
+      pointer-events: none;
+      display: none;
     }
     section.active {
-      display: block;
       opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+      display: block;
     }
 
     /* Headings */
     h2 {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       color: #2c3e50;
-      margin-bottom: 1rem;
-      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
       border-bottom: 3px solid #3498db;
+      user-select: text;
     }
     h3 {
       font-family: 'Raleway', sans-serif;
@@ -120,25 +150,28 @@
       color: #34495e;
       margin-top: 3rem;
       margin-bottom: 1rem;
+      user-select: text;
     }
 
     /* Paragraph */
     p {
       font-size: 1.125rem;
       color: #444;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.5rem;
       letter-spacing: 0.02em;
+      user-select: text;
     }
 
     /* Lists */
     ul {
-      margin: 1rem 0 2rem 2rem;
+      margin: 1rem 0 2rem 2.2rem;
       color: #566573;
       font-size: 1.1rem;
+      user-select: text;
     }
     ul li {
-      margin-bottom: 0.65rem;
-      line-height: 1.45;
+      margin-bottom: 0.7rem;
+      line-height: 1.55;
     }
 
     /* Affiliate links styling */
@@ -158,10 +191,10 @@
     /* Premium images */
     img.premium-img {
       max-width: 100%;
-      margin: 2.75rem auto;
+      margin: 3rem auto;
       display: block;
-      border-radius: 14px;
-      box-shadow: 0 12px 25px rgb(52 152 219 / 0.3);
+      border-radius: 16px;
+      box-shadow: 0 16px 40px rgb(52 152 219 / 0.25);
       pointer-events: none;
       user-select: none;
     }
@@ -169,24 +202,24 @@
     /* Buttons */
     .btn-download {
       display: inline-block;
-      background-color: #2980b9;
-      border-radius: 24px;
-      padding: 0.85rem 2.1rem;
+      background-color: #3498db;
+      border-radius: 32px;
+      padding: 1rem 2.5rem;
       font-weight: 700;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: #fff;
       text-decoration: none;
-      box-shadow: 0 6px 12px rgb(52 152 219 / 0.5);
+      box-shadow: 0 8px 20px rgb(52 152 219 / 0.5);
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
-      margin-top: 1.5rem;
       letter-spacing: 0.04em;
       font-family: 'Raleway', sans-serif;
+      margin-top: 1.7rem;
     }
     .btn-download:hover,
     .btn-download:focus {
-      background-color: #3498db;
-      box-shadow: 0 8px 20px rgb(52 152 219 / 0.7);
+      background-color: #4aa1f3;
+      box-shadow: 0 12px 28px rgb(52 152 219 / 0.7);
       outline: none;
     }
 
@@ -194,74 +227,83 @@
     label {
       display: block;
       font-weight: 700;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
       font-size: 1rem;
       color: #34495e;
+      user-select: text;
     }
     input, textarea {
       width: 100%;
-      padding: 1rem 1.2rem;
-      font-size: 1.1rem;
-      border-radius: 12px;
+      padding: 1.1rem 1.3rem;
+      font-size: 1.15rem;
+      border-radius: 14px;
       border: 2px solid #dfe6e9;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.5rem;
       font-family: 'Raleway', sans-serif;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
       resize: vertical;
+      user-select: text;
     }
     input:focus, textarea:focus {
       border-color: #2980b9;
-      box-shadow: 0 0 10px rgba(41, 128, 185, 0.5);
+      box-shadow: 0 0 12px rgba(41, 128, 185, 0.8);
       outline: none;
     }
     button[type="submit"] {
-      background-color: #2980b9;
+      background-color: #3498db;
       color: #fff;
       border: none;
-      padding: 1.1rem 2.5rem;
-      font-size: 1.2rem;
+      padding: 1.2rem 3rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      border-radius: 30px;
+      border-radius: 34px;
       cursor: pointer;
       font-family: 'Raleway', sans-serif;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
-      box-shadow: 0 6px 14px rgba(41, 128, 185, 0.5);
+      box-shadow: 0 8px 20px rgba(52, 152, 219, 0.5);
+      user-select: none;
     }
     button[type="submit"]:hover,
     button[type="submit"]:focus {
-      background-color: #3498db;
+      background-color: #4aa1f3;
       outline: none;
+      box-shadow: 0 12px 28px rgba(52, 152, 219, 0.7);
     }
     #formStatus {
       font-weight: 700;
       color: #2e86de;
-      padding-top: 0.6rem;
+      padding-top: 0.7rem;
+      user-select: text;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #7f8c8d;
-      margin-top: 4rem;
-      padding-bottom: 1.5rem;
+      margin-top: 5rem;
+      padding-bottom: 2rem;
       user-select: none;
       font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.03em;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
       main {
-        margin: 2rem 1rem 4rem;
-        padding: 2rem 1.5rem;
+        margin: 110px 1rem 50px;
+        padding: 2.5rem 1.5rem;
       }
       header h1 {
         font-size: 2.6rem;
       }
+      nav {
+        gap: 12px;
+      }
       nav button {
-        font-size: 1rem;
-        padding: 1rem 1rem;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
       }
       img.premium-img {
         margin: 2rem 0;
@@ -286,101 +328,94 @@
   </nav>
 
   <main>
-    <!-- Home Section -->
     <section id="home" class="active" role="region" aria-labelledby="home-title" tabindex="-1">
       <h2 id="home-title">How AI Is Revolutionizing Small Businesses & Solo Entrepreneurs</h2>
       <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1050&q=80" alt="Small business owner working on AI automation" class="premium-img" />
       <p>In the rapidly evolving digital marketplace, <strong>Artificial Intelligence (AI)</strong> technologies have emerged as essential tools for <strong>small businesses and solo entrepreneurs</strong> seeking competitive advantage, operational efficiency, and accelerated growth.</p>
-      <p>Powerful platforms like <a href="https://n8n.io" target="_blank" rel="noopener" class="affiliate">n8n</a> provide no-code <strong>workflow automation</strong> to revolutionize how businesses generate and nurture leads, manage customer relationships, and analyze data — all while minimizing manual labor and maximizing scalability.</p>
-      <p>Complementary AI tools such as <a href="https://jasper.ai" target="_blank" rel="noopener" class="affiliate">Jasper AI</a> for content creation, <a href="https://getresponse.com" target="_blank" rel="noopener" class="affiliate">GetResponse</a> for intelligent marketing automation, and <a href="https://copy.ai" target="_blank" rel="noopener" class="affiliate">Copy.ai</a> for persuasive copywriting streamline your sales funnel to deliver remarkable ROI.</p>
+      <p>Powerful platforms like <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n</a> provide no-code <strong>workflow automation</strong> to revolutionize how businesses generate, nurture leads, and manage customer relationships, minimizing labor and maximizing scalability.</p>
+      <p>Complementary AI tools such as <a href="https://jasper.ai" target="_blank" rel="noopener" class="affiliate">Jasper AI</a> for content creation, <a href="https://getresponse.com" target="_blank" rel="noopener" class="affiliate">GetResponse</a> for marketing automation, and <a href="https://copy.ai" target="_blank" rel="noopener" class="affiliate">Copy.ai</a> for copywriting streamline sales funnels to yield remarkable ROI.</p>
       <h3>Key Advantages of AI for Small Business Success</h3>
       <ul>
-        <li><strong>Automatic task execution:</strong> Save countless hours by automating emails, social media, and customer support with precision AI workflows.</li>
-        <li><strong>Improved lead quality and nurturing:</strong> Harness AI algorithms to score and segment leads for targeted outreach that converts.</li>
-        <li><strong>Accelerated content production:</strong> Deploy AI to craft SEO-optimized blog posts, ads, and customer-engaging content consistently.</li>
-        <li><strong>Cost-efficient scaling:</strong> Replace expensive agencies with accessible AI-powered platforms that empower small enterprises.</li>
+        <li><strong>Automate routine tasks:</strong> Save countless hours with AI-driven emails, posts, and support.</li>
+        <li><strong>Better lead quality:</strong> Score and target high-conversion prospects.</li>
+        <li><strong>Consistent SEO content:</strong> Produce optimized blogs and ads that attract organic traffic.</li>
+        <li><strong>Cost-efficient scaling:</strong> Replace costly agencies with flexible AI platforms.</li>
       </ul>
-      <p>At <strong>Nexus Wealth AI</strong>, we blend practical AI insights and affiliate marketing strategies to help you capitalize on these revolutionary tools and monetize your digital presence smartly.</p>
+      <p>Partner with <strong>Nexus Wealth AI</strong> to access cutting-edge AI insights and affiliate marketing strategies to monetize your digital presence smartly.</p>
     </section>
 
-    <!-- AI Tools Section -->
     <section id="tools" role="region" aria-labelledby="tools-title" tabindex="-1">
       <h2 id="tools-title">Top-Tier AI Platforms Empowering Small Business Growth</h2>
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1050&q=80" alt="AI digital network representing workflow automation" class="premium-img" />
-      <p>Discover the industry-leading AI platforms that amplify your marketing reach, automate critical workflows, and turbocharge lead generation efficiency:</p>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1050&q=80" alt="AI digital interface representing workflow automation" class="premium-img" />
+      <p>Discover industry-leading AI platforms that amplify marketing reach, automate workflows, and turbocharge lead generation efficiency:</p>
       <ul>
-        <li><strong><a href="https://n8n.io" target="_blank" rel="noopener" class="affiliate">n8n Automation Platform</a>:</strong> An open-source no-code environment enabling you to build customized automated workflows that seamlessly connect with your existing CRM, email, and AI services, helping you win more customers on autopilot.</li>
-        <li><strong><a href="https://getresponse.com" target="_blank" rel="noopener" class="affiliate">GetResponse AI</a>:</strong> Harness AI-powered email marketing, landing page creation, and funnel automation built specifically to enhance conversions and boost your small business’ sales pipeline.</li>
-        <li><strong><a href="https://jasper.ai" target="_blank" rel="noopener" class="affiliate">Jasper AI</a>:</strong> Revolutionize your content marketing with expert SEO blog posts, engaging ad copy, and social media content crafted quickly and precisely.</li>
-        <li><strong><a href="https://copy.ai" target="_blank" rel="noopener" class="affiliate">Copy.ai</a>:</strong> Advanced AI content creation tool delivering compelling product descriptions, sales copy, and targeted messaging to convert leads faster.</li>
+        <li><strong><a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n Automation Platform</a>:</strong> Open-source no-code builder for customizable automated workflows that connect AI models, CRMs, and marketing tools, enabling 24/7 lead flow pipelines.</li>
+        <li><strong><a href="https://getresponse.com" target="_blank" rel="noopener noreferrer" class="affiliate">GetResponse AI</a>:</strong> Comprehensive AI-powered marketing including emails, landing pages, and sales funnels to optimize conversions powerfully.</li>
+        <li><strong><a href="https://jasper.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Jasper AI</a>:</strong> Revolutionize content marketing with SEO-focused blog posts and persuasive ad copy in minutes.</li>
+        <li><strong><a href="https://copy.ai" target="_blank" rel="noopener noreferrer" class="affiliate">Copy.ai</a>:</strong> AI-powered copywriting delivering compelling descriptions, landing pages, and social ads.</li>
       </ul>
-      <p>By integrating these powerhouse platforms into your workflow, small businesses and entrepreneurs achieve remarkable efficiency gains, better lead conversion, and sustainable growth.</p>
+      <p>Integrate these platforms to achieve sustainable growth, efficient lead conversions, and elevated customer engagement with minimal manual effort.</p>
     </section>
 
-    <!-- In-Depth Article Section -->
     <section id="article" role="region" aria-labelledby="article-title" tabindex="-1">
       <h2 id="article-title">Comprehensive Guide: Leveraging AI to Supercharge Lead Generation and Business Growth</h2>
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1050&q=80" alt="Entrepreneur analyzing AI-powered business data" class="premium-img" />
-      <p>AI is revolutionizing the foundations of modern business, especially for small enterprises and solo entrepreneurs eager to optimize their daily operations and marketing activities with minimal overhead. This guide explores how to implement AI tools like <a href="https://n8n.io" target="_blank" rel="noopener" class="affiliate">n8n</a> to automate workflows that drive lead generation, customer engagement, and content creation.</p>
-      <h3>Why Effective Lead Generation Is Vital</h3>
-      <p>Lead generation powers growth yet remains laborious without AI. Traditional methods face obstacles such as manual data handling, delayed lead follow-ups, and inconsistent customer journeys. AI enables automatic data capture, real-time lead scoring, and tailored nurturing campaigns fostering higher engagement and closing rates.</p>
-      <p>Platforms like n8n integrate easily with major CRMs and marketing tools to automate entire sales funnels — seamlessly connecting data points, ensuring prompt responses, and optimizing messaging across channels like email, SMS, and social media.</p>
-      <h3>n8n: Flexible Automation for Small Business</h3>
-      <p>As an open-source powerhouse, n8n becomes the nerve center for your AI-driven ecosystem—allowing custom no-code workflows connecting APIs and AI models including GPT and other ML services for smart content generation and lead enrichment:</p>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1050&q=80" alt="Entrepreneur analyzing AI business data on laptop" class="premium-img" />
+      <p>AI is fundamentally reshaping how small businesses and solo entrepreneurs approach lead generation and scaling. This guide dives into adopting platforms like <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="affiliate">n8n</a> which automate workflows, connect APIs, and empower businesses with no-code AI capabilities.</p>
+      <h3>The Importance of Efficient Lead Generation</h3>
+      <p>Traditional lead gen is costly, slow, and error-prone. AI automates capturing data from multiple channels, scoring leads intelligently, and nurturing clients with personalized sequences. The result is faster sales cycles, consistent engagement, and improved ROI.</p>
+      <p>n8n facilitates seamless CRM integration and automated communication sequences adapting per customer behavior, removing delays and increasing lead quality and conversion rate.</p>
+      <h3>Unlocking n8n's Automation Power</h3>
+      <p>n8n is trusted for its flexibility with over 300 integrations including AI services. Small businesses use n8n to:</p>
       <ul>
-        <li>Automate repetitive, manual sales tasks.</li>
-        <li>Synchronize leads across multiple platforms without data silos.</li>
-        <li>Build dynamic drip campaigns personalized by AI insights.</li>
+        <li>Automate tedious tasks and data processing.</li>
+        <li>Sync and enrich leads constantly across platforms.</li>
+        <li>Build dynamic, intelligent email drip campaigns.</li>
       </ul>
-      <h3>Accelerate Growth with AI-Powered Content Marketing</h3>
-      <p>AI content creation tools like Jasper and Copy.ai ease and accelerate producing high-impact, SEO-optimized content that drives organic traffic and improves search rankings. These tools research keywords, suggest headlines, and draft perfect blog posts or ad copies—democratizing expert copywriting.</p>
-      <h3>Affiliate Marketing Strategy in AI Niche</h3>
-      <p>Affiliate marketing around AI tools is thriving. Promoting trusted platforms such as n8n and Jasper AI not only aids your audience but also creates robust passive income streams. Operating Nexus Wealth AI as both an authoritative source and affiliate network engages audiences authentically while generating revenue.</p>
-      <h3>Building the AI-Powered Business Ecosystem</h3>
-      <p>Connect, automate, and scale by integrating AI tools responsibly. Our expert tips, downloadable eBook, and affiliate offers at Nexus Wealth AI enable you to construct a thriving, modern business harnessing the full potential of AI innovation efficiently and effectively.</p>
+      <h3>Boosting SEO with AI Content</h3>
+      <p>Generating impactful SEO content demands time and expertise. Jasper AI and Copy.ai reduce this friction by creating rich, keyword-targeted blogs and ads, increasing organic traffic and brand authority faster than ever.</p>
+      <h3>Affiliate Marketing: Monetizing AI Solutions</h3>
+      <p>AI tool affiliates benefit from growing industry demand. Trustworthy, in-depth reviews and tutorials generate affiliate commissions while helping businesses adopt game-changing technology. Nexus Wealth AI merges education and monetization seamlessly for a win-win synergy.</p>
+      <h3>Designing Your AI Business Ecosystem</h3>
+      <p>Smart integration and automation of AI platforms unlock scalable, agile business models. Using Nexus Wealth AI resources and eBooks, entrepreneurs are empowered with actionable AI strategies, turning complex tech into simple, profitable workflows.</p>
     </section>
 
-    <!-- eBook Section -->
     <section id="ebook" role="region" aria-labelledby="ebook-title" tabindex="-1">
-      <h2 id="ebook-title">Exclusive eBook: The Ultimate Playbook to AI Automation and Lead Generation</h2>
+      <h2 id="ebook-title">Free eBook: The Ultimate Playbook to AI Automation and Lead Generation</h2>
       <img src="https://images.unsplash.com/photo-1581090700227-e523439095bd?auto=format&fit=crop&w=1050&q=80" alt="Digital marketing eBook cover" class="premium-img" />
-      <p>Unlock the secrets to success with our comprehensive eBook, packed with:</p>
+      <p>Unlock practical approaches in this comprehensive eBook filled with:</p>
       <ul>
-        <li>Step-by-step workflows for automating lead generation using n8n</li>
-        <li>Advanced content marketing strategies powered by Jasper AI and Copy.ai</li>
-        <li>Affiliate marketing best practices for monetizing AI platforms</li>
-        <li>SEO optimization tactics tailored for small business growth</li>
-        <li>Growth hacks for solo entrepreneurs leveraging AI tools</li>
+        <li>Detailed automated workflow blueprints using n8n</li>
+        <li>Advanced AI content strategies with Jasper and Copy.ai</li>
+        <li>High-converting affiliate marketing techniques for AI niches</li>
+        <li>SEO optimization and traffic generation advice tailored for small business owners</li>
+        <li>Proven growth hacks for solo entrepreneurs using AI tech</li>
       </ul>
-      <a href="NexusWealthAI_eBook.pdf" download class="btn-download" aria-label="Download the free AI small business eBook">Download Your Free eBook Now</a>
+      <a href="NexusWealthAI_eBook.pdf" download class="btn-download" aria-label="Download the free AI small business eBook">Download Your Free eBook</a>
     </section>
 
-    <!-- Privacy Policy Section -->
     <section id="privacy" role="region" aria-labelledby="privacy-title" tabindex="-1">
       <h2 id="privacy-title">Privacy Policy</h2>
-      <p>At Nexus Wealth AI, your privacy is our top priority. We collect only minimal personal data necessary—for contact forms and newsletter registrations—using secure, encrypted connections.</p>
-      <p>We respect your data rights and strictly adhere to GDPR and CCPA regulations, ensuring no sale or unauthorized sharing of your data. Tracking is limited to trusted affiliate service partners for transparent reporting.</p>
-      <p>Cookies are used sparingly to enhance your browsing experience and personalize our AI tool recommendations.</p>
-      <p>Contact us anytime to inquire about your data or request deletion via the email below.</p>
+      <p>We prioritize your privacy, collecting minimal personal info only via secure contact forms and newsletter sign-ups.</p>
+      <p>Compliance with GDPR & CCPA is strictly observed; personal data isn’t sold or shared beyond trusted affiliate tracking partners.</p>
+      <p>Cookies enhance browsing and personalize AI tool offers responsibly.</p>
+      <p>You may contact us anytime for data inquiries or removals at the provided email.</p>
     </section>
 
-    <!-- Terms of Service Section -->
     <section id="terms" role="region" aria-labelledby="terms-title" tabindex="-1">
       <h2 id="terms-title">Terms of Service</h2>
-      <p>By using Nexus Wealth AI, you agree to the following terms:</p>
+      <p>Use of Nexus Wealth AI signifies acceptance of:</p>
       <ul>
-        <li>Content is informational and not professional business advice.</li>
-        <li>Affiliate links may generate commissions supporting the site without impacting your cost.</li>
-        <li>While we strive for accuracy, no guarantees on outcomes or results are provided.</li>
-        <li>Users are responsible for complying with terms set by external AI services promoted here.</li>
+        <li>Informational, non-professional advice content.</li>
+        <li>Affiliate commission earnings supporting site maintenance.</li>
+        <li>No explicit guarantees on results, accuracy maintained diligently.</li>
+        <li>User compliance with external AI tool providers.</li>
       </ul>
-      <p>For questions or concerns, please contact us anytime.</p>
+      <p>Please contact us with questions or concerns.</p>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" role="region" aria-labelledby="contact-title" tabindex="-1">
       <h2 id="contact-title">Get in Touch with Nexus Wealth AI</h2>
-      <p>Questions about AI tools, affiliate marketing, or our resources? We’re here to help! Use the form below or email us directly.</p>
+      <p>Reach out for AI tool guidance, affiliate marketing advice or inquiries via the form or email below.</p>
       <form id="contactForm" aria-label="Contact form">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Full name" required />
@@ -425,6 +460,7 @@
       btn.addEventListener('click', () => activateSection(idx));
     });
 
+    // Contact form submission - demo only
     const form = document.getElementById('contactForm');
     const statusDiv = document.getElementById('formStatus');
     form.addEventListener('submit', e => {
